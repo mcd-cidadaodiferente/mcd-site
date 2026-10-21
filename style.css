@@ -20,3 +20,14 @@
 .law-link:hover{background:#dff2fa}
 .law-panel .tag{background:#eef6e3;color:#426d1c}
 @media(max-width:700px){.law-tabs{display:grid;grid-template-columns:1fr;gap:8px}.law-tab{text-align:left;width:100%}.law-item{align-items:flex-start;flex-direction:column;gap:12px}.law-link{white-space:normal}.law-panel{padding:18px}}
+
+
+/* Organograma institucional — composição dos órgãos sociais */
+.mcd-org-chart{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin-top:1.6rem;align-items:start}
+.mcd-org-group{--org-color:#1687cc;border:1px solid var(--org-color);border-radius:18px;padding:0 0 1rem;background:#fff;overflow:hidden;box-shadow:0 8px 24px rgba(12,40,74,.07)}
+.mcd-org-green{--org-color:#639b24}.mcd-org-blue{--org-color:#0789d6}.mcd-org-pink{--org-color:#df1671}
+.mcd-org-group h4{background:var(--org-color);color:#fff;margin:0;padding:1rem;text-align:center;font-size:1.05rem;line-height:1.3}
+.mcd-org-group ul{list-style:none;margin:0;padding:.7rem;display:grid;gap:.55rem}
+.mcd-org-group li{border:1px solid var(--org-color);border-radius:12px;padding:.65rem .8rem;display:flex;flex-direction:column;gap:.15rem;line-height:1.35}
+.mcd-org-group li strong{color:#17223a;font-size:.93rem}.mcd-org-group li span{color:#293449;font-size:.94rem}
+@media(max-width:850px){.mcd-org-chart{grid-template-columns:1fr;max-width:540px;margin-left:auto;margin-right:auto}}
