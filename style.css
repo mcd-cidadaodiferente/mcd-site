@@ -62,3 +62,12 @@
 .mcd-guide-links a{display:block;background:#fff;border:1px solid #c4dce9;border-radius:9px;padding:.85rem;color:#074777;text-decoration:none;font-weight:650}
 .mcd-guide-links a:hover,.mcd-guide-links a:focus-visible{background:#dff2fa}
 @media(max-width:850px){.mcd-video-grid{grid-template-columns:1fr}.mcd-guide-links{grid-template-columns:1fr}}
+
+/* Redes sociais oficiais */
+.mcd-social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.5rem}
+.mcd-social-link{display:flex;align-items:center;gap:1rem;padding:1.2rem;border-radius:15px;border:1px solid #d3e3f0;background:#fff;color:#0b2f53;text-decoration:none}
+.mcd-social-link:hover,.mcd-social-link:focus-visible{background:#eff8ff;border-color:#1a8ccc}
+.mcd-social-link>span:nth-child(2){display:flex;flex-direction:column;gap:.25rem;flex:1}
+.mcd-social-link strong{font-size:1.12rem}.mcd-social-link small{color:#516278;font-size:.9rem}
+.mcd-social-icon{width:3rem;height:3rem;border-radius:12px;background:#063a70;color:white;display:grid;place-items:center;font-size:1.8rem;font-weight:800}
+@media(max-width:700px){.mcd-social-grid{grid-template-columns:1fr}}
