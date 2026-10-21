@@ -10,11 +10,36 @@
   <a class="brand" href="#inicio"><span class="brand-mark">MCD</span><span><strong>Movimento Cidadão Diferente</strong><small>Direitos · Inclusão · Participação</small></span></a>
   <button class="menu-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
   <nav class="nav" aria-label="Navegação principal">
-    <a href="#quem-somos">Quem somos</a><a href="#legislacao">Legislação</a><a href="#informacao">Informação</a><a href="#noticias">Notícias</a><a href="#agenda">Webinars e formação</a><a href="#associados">Faça-se Associado</a><a href="#contactos">Contactos</a>
+    <a href="#campanha-oe2027">Campanha OE 2027</a><a href="#quem-somos">Quem somos</a><a href="#legislacao">Legislação</a><a href="#informacao">Informação</a><a href="#noticias">Notícias</a><a href="#agenda">Webinars e formação</a><a href="#associados">Faça-se Associado</a><a href="#contactos">Contactos</a>
   </nav>
 </header>
 <main>
 <section class="hero" id="inicio"><div class="hero-copy"><p class="eyebrow">Uma sociedade onde todos contam</p><h1>Direitos reconhecidos. Inclusão vivida.</h1><p class="lead">Informação, participação e ação cívica para defender os direitos das pessoas com deficiência, das suas famílias e de quem cuida.</p><div class="actions"><a class="button primary" href="#legislacao">Consultar legislação</a><a class="button secondary" href="#agenda">Ver iniciativas</a></div></div><aside class="hero-panel"><img class="hero-poster" src="cartaz-identidade-mcd.jpg" alt="Cartaz do Movimento Cidadão Diferente, com crianças e mensagem de inclusão"><p class="panel-kicker">A diferença não pode ser uma barreira.</p><ul><li>Direitos e dignidade</li><li>Educação inclusiva</li><li>Apoio às famílias e cuidadores</li><li>Participação cívica</li></ul></aside></section>
+<section class="section campaign" id="campanha-oe2027" aria-label="Campanha OE 2027">
+<p class="eyebrow">Campanha de sensibilização</p><h2>OE 2027 — Que respostas para as pessoas com deficiência?</h2>
+<p class="section-lead">Oito mensagens sobre os apoios, os custos e os desafios das pessoas com deficiência e das suas famílias.</p>
+<div class="campaign-carousel" aria-roledescription="carrossel" aria-label="Campanha OE 2027">
+<div class="campaign-stage"><div class="campaign-slide is-active" role="group" aria-roledescription="diapositivo" aria-label="1 de 8"><img src="01_OE2027_respostas_reais.png" alt="OE 2027: respostas reais" loading="eager" onerror="this.closest('.campaign-slide').classList.add('image-missing')"><p class="campaign-missing">Imagem 1 ainda não publicada.</p></div>
+<div class="campaign-slide" role="group" aria-roledescription="diapositivo" aria-label="2 de 8"><img src="02_verbas_chegam_as_pessoas.png" alt="Verbas para a inclusão" loading="lazy" onerror="this.closest('.campaign-slide').classList.add('image-missing')"><p class="campaign-missing">Imagem 2 ainda não publicada.</p></div>
+<div class="campaign-slide" role="group" aria-roledescription="diapositivo" aria-label="3 de 8"><img src="03_protecao_social_portugal_europa.png" alt="Portugal e União Europeia" loading="lazy" onerror="this.closest('.campaign-slide').classList.add('image-missing')"><p class="campaign-missing">Imagem 3 ainda não publicada.</p></div>
+<div class="campaign-slide" role="group" aria-roledescription="diapositivo" aria-label="4 de 8"><img src="04_custo_de_vida_combustiveis.png" alt="Custo de vida e combustíveis" loading="lazy" onerror="this.closest('.campaign-slide').classList.add('image-missing')"><p class="campaign-missing">Imagem 4 ainda não publicada.</p></div>
+<div class="campaign-slide" role="group" aria-roledescription="diapositivo" aria-label="5 de 8"><img src="05_terapias_e_cuidados.png" alt="Terapias e cuidados" loading="lazy" onerror="this.closest('.campaign-slide').classList.add('image-missing')"><p class="campaign-missing">Imagem 5 ainda não publicada.</p></div>
+<div class="campaign-slide" role="group" aria-roledescription="diapositivo" aria-label="6 de 8"><img src="06_CACI_comparticipacao_familiar.png" alt="Comparticipação familiar nos CACI" loading="lazy" onerror="this.closest('.campaign-slide').classList.add('image-missing')"><p class="campaign-missing">Imagem 6 ainda não publicada.</p></div>
+<div class="campaign-slide" role="group" aria-roledescription="diapositivo" aria-label="7 de 8"><img src="07_PSI_poder_de_compra.png" alt="PSI e poder de compra" loading="lazy" onerror="this.closest('.campaign-slide').classList.add('image-missing')"><p class="campaign-missing">Imagem 7 ainda não publicada.</p></div>
+<div class="campaign-slide" role="group" aria-roledescription="diapositivo" aria-label="8 de 8"><img src="08_subsidio_educacao_especial.png" alt="Subsídio de Educação Especial" loading="lazy" onerror="this.closest('.campaign-slide').classList.add('image-missing')"><p class="campaign-missing">Imagem 8 ainda não publicada.</p></div></div>
+<div class="campaign-controls"><button type="button" onclick="campaignMove(-1)" aria-label="Slide anterior">❮</button><span id="campaign-count" aria-live="polite">1 / 8</span><button type="button" onclick="campaignMove(1)" aria-label="Slide seguinte">❯</button><button type="button" id="campaign-toggle" onclick="campaignToggle()" aria-label="Pausar reprodução automática">Pausar ⏸</button></div>
+</div>
+</section>
+<script>
+(function(){
+var slides=document.querySelectorAll('.campaign-slide'),index=0,playing=true,timer;
+function show(n){slides[index].classList.remove('is-active');index=(n+slides.length)%slides.length;slides[index].classList.add('is-active');document.getElementById('campaign-count').textContent=(index+1)+' / '+slides.length;}
+function schedule(){clearInterval(timer);if(playing)timer=setInterval(function(){show(index+1)},5500);}
+window.campaignMove=function(step){show(index+step);schedule();};
+window.campaignToggle=function(){playing=!playing;document.getElementById('campaign-toggle').textContent=playing?'Pausar ⏸':'Reproduzir ▶';document.getElementById('campaign-toggle').setAttribute('aria-label',playing?'Pausar reprodução automática':'Retomar reprodução automática');schedule();};
+schedule();document.addEventListener('visibilitychange',function(){if(document.hidden)clearInterval(timer);else schedule();});
+})();
+</script>
 <section class="section" id="quem-somos">
 <p class="eyebrow">Quem somos</p>
 <div class="law-tabs" role="tablist" aria-label="Informação institucional">
