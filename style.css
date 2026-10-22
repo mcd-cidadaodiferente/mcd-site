@@ -118,3 +118,5 @@ footer{background:#172c43;border-top-color:#e58a34;padding-top:28px;padding-bott
 @media(max-width:780px){.hero{grid-template-columns:1fr}.hero-panel{max-width:560px}.mcd-video-grid,.mcd-social-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(36px,8vw,53px)}}
 @media(max-width:650px){.site-header{padding:11px 16px}.brand strong{font-size:12px}.brand small{font-size:9px}.brand-mark{height:48px;width:48px}.hero{padding:50px 20px}.section{padding-left:20px;padding-right:20px}.mcd-video-card{padding:15px}.section h2{font-size:32px}.mcd-guide-links{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+.mcd-instagram-icon{background:linear-gradient(135deg,#833ab4,#c13584 48%,#f77737);color:#fff;font-size:2rem}
