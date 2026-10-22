@@ -75,3 +75,46 @@
 .mcd-brand-logo{display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit}.mcd-youtube-icon{background:#e62117;color:white}
 
 .mcd-facebook-video{aspect-ratio:16/9;background:#edf3fc;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.6rem;padding:1rem;color:#124b87}.mcd-facebook-video>span{font-size:2.2rem}.mcd-facebook-video p{margin:0;font-weight:700}.mcd-facebook-video a{color:#0759a8;font-weight:700}
+
+
+/* Renovação visual institucional MCD — mantém estrutura, conteúdo e funcionalidades */
+:root{--navy:#172a40;--ink:#233247;--muted:#536477;--paper:#f5f8fc;--blue:#087cae;--teal:#377f7c;--green:#659d36;--orange:#e47d25;--gold:#e6a043}
+html{scroll-padding-top:95px}
+body{background:#fff;color:var(--ink);font-size:15px;-webkit-font-smoothing:antialiased}
+a,button{transition:background-color .18s,border-color .18s,color .18s,box-shadow .18s,transform .18s}
+a:focus-visible,button:focus-visible{outline:3px solid #ed9b43;outline-offset:4px}
+.site-header{max-width:none;padding:16px max(22px,calc((100vw - 1370px)/2));background:rgba(255,255,255,.98);border-bottom:1px solid #e3eaf1;box-shadow:0 5px 24px #1d37540b;position:sticky;top:0;z-index:30;flex-wrap:wrap}
+.brand{min-width:0}.brand-mark{width:57px;height:57px;background:#fff;border:1px solid #e0e8ef;box-shadow:0 3px 15px #122d4a15;overflow:hidden;flex:0 0 auto}
+.brand strong{font-size:15px;line-height:1.2;max-width:220px}.brand small{font-size:10px;letter-spacing:.065em;margin-top:3px}
+.nav{gap:clamp(8px,1vw,16px);flex-wrap:wrap;justify-content:flex-end;max-width:950px;font-size:11px}
+.nav a{padding:7px 3px;border-bottom:2px solid transparent}.nav a:hover,.nav a:focus-visible{color:#086b95;border-bottom-color:var(--orange)}
+.hero{background:radial-gradient(ellipse at 92% 10%,#dff4f5 0%,transparent 40%),linear-gradient(120deg,#f7fafc,#eef6fc 60%,#f7fbf2);padding-top:clamp(60px,7vw,105px);padding-bottom:clamp(60px,7vw,105px);gap:clamp(28px,5vw,75px);min-height:560px}
+.hero h1{font-size:clamp(39px,5.5vw,70px);color:#142e48;letter-spacing:-.05em;line-height:1.08}
+.hero .eyebrow{color:#327d69;font-size:11px}.lead{font-size:clamp(16px,1.4vw,19px);line-height:1.75;color:#41576c}
+.button,.law-link{border-radius:12px;font-size:13px;padding:13px 21px}
+.button:hover,.law-link:hover{transform:translateY(-2px);box-shadow:0 8px 22px #153b5b1a}
+.primary{background:#e37e27;color:#fff}.primary:hover{background:#bd6016}.secondary{background:#fff;border:1px solid #9ec8dd;color:#096e9d}
+.hero-panel{border-radius:22px;border:1px solid #dce7ed;box-shadow:0 22px 60px #16334a20;padding:9px}.hero-poster{height:clamp(280px,31vw,425px);object-fit:contain;background:#f6f8fa}
+.section{padding-top:clamp(65px,7vw,100px);padding-bottom:clamp(65px,7vw,100px)}
+.section h2{font-size:clamp(31px,3.5vw,46px);color:#18334e;letter-spacing:-.04em}
+.eyebrow{font-size:11px;color:#357e68;letter-spacing:.14em}
+.section-lead{font-size:16px;line-height:1.85}
+.focus,.campaign{background:#f4f8fb}.join{background:linear-gradient(110deg,#e8f3f5,#f1f8ee 56%,#fdf1f5)}
+.info-card,.mcd-video-card,.law-panel,.mcd-social-link,.mcd-org-group{box-shadow:0 9px 30px #123a570b;border-color:#dce6ee}
+.info-card,.mcd-video-card{border-radius:18px;padding:24px}
+.info-card:hover,.mcd-social-link:hover,.mcd-video-card:hover{box-shadow:0 15px 40px #123a5719;transform:translateY(-2px)}
+.values article{border-top-color:var(--orange);border-radius:14px;background:#f7fafc}
+.law-tabs{gap:12px}.law-tab{border-radius:12px;font-size:13px}.law-tab.active{background:#176b92;border-color:#176b92}
+.law-panel{border-radius:20px}.law-item{background:#fbfdff;border-radius:13px}
+.mcd-guide-feature{background:#f2f8fa;border-color:#c9e2e9}
+.mcd-video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.mcd-video-card{min-width:0}.mcd-video-frame{border-radius:12px}
+.mcd-social-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.mcd-social-link{min-width:0}
+.campaign-stage{border-radius:18px;box-shadow:0 18px 44px #142e4b22}
+.contact{background:#fff}.email{font-size:clamp(18px,2.5vw,26px);overflow-wrap:anywhere}
+footer{background:#172c43;border-top-color:#e58a34;padding-top:28px;padding-bottom:28px}
+@media(max-width:1250px){.site-header{padding-left:22px;padding-right:22px}.nav{max-width:760px}}
+@media(max-width:1050px){.site-header{flex-wrap:nowrap;align-items:center}.nav{position:absolute;top:calc(100% + 5px);max-width:none;z-index:40;gap:3px}.nav a{width:100%;padding:10px 8px;font-size:14px}.menu-toggle{display:block;background:#173c5b;border-radius:10px;padding:10px 14px}.hero{grid-template-columns:1fr 0.9fr;gap:24px}.mcd-social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.hero{grid-template-columns:1fr}.hero-panel{max-width:560px}.mcd-video-grid,.mcd-social-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(36px,8vw,53px)}}
+@media(max-width:650px){.site-header{padding:11px 16px}.brand strong{font-size:12px}.brand small{font-size:9px}.brand-mark{height:48px;width:48px}.hero{padding:50px 20px}.section{padding-left:20px;padding-right:20px}.mcd-video-card{padding:15px}.section h2{font-size:32px}.mcd-guide-links{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
