@@ -128,3 +128,6 @@ footer{background:#172c43;border-top-color:#e58a34;padding-top:28px;padding-bott
 
 /* Notícias e comunicados */
 .mcd-news-article{display:grid;grid-template-columns:minmax(230px,.8fr) minmax(0,1.6fr);gap:32px;align-items:start;background:#fff;border:1px solid #e1e8ef;border-radius:22px;padding:30px;box-shadow:0 12px 36px #123a570a}.mcd-news-poster{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 6px 22px #00000012}.mcd-news-body h3{font-size:clamp(1.4rem,2.3vw,2rem);line-height:1.25;margin:14px 0 22px}.mcd-news-body p{line-height:1.75;margin:0 0 18px}.mcd-news-tags{overflow-wrap:anywhere;font-size:.85rem;color:#677481}.mcd-news-article{scroll-margin-top:100px}@media(max-width:800px){.mcd-news-article{grid-template-columns:1fr;padding:20px}.mcd-news-poster-wrap{max-width:500px}}
+
+/* Missão e visão na página inicial */
+.mcd-purpose{display:grid;gap:18px;margin:24px 0 26px}.mcd-purpose-item{border-left:4px solid var(--blue);padding:5px 0 5px 18px}.mcd-purpose-item:nth-child(2){border-left-color:var(--green)}.mcd-purpose-item h2{font-size:clamp(1.12rem,1.6vw,1.38rem);margin:0 0 8px;color:var(--navy);line-height:1.3}.mcd-purpose-item p{font-size:clamp(.95rem,1.1vw,1.07rem);line-height:1.65;margin:0;max-width:70ch}@media(max-width:700px){.mcd-purpose{gap:20px}.mcd-purpose-item{padding-left:14px}}
