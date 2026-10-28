@@ -137,3 +137,11 @@ footer{background:#172c43;border-top-color:#e58a34;padding-top:28px;padding-bott
 
 /* Visibilidade dos logótipos dos parceiros */
 .mcd-partner-logo-wrap img:not([hidden]){display:block!important;width:auto!important;height:auto!important;max-width:100%!important;max-height:110px!important;object-fit:contain!important;opacity:1!important;visibility:visible!important}.mcd-partner-logo-wrap img[hidden]{display:none!important}
+
+
+/* Webinar de Educação Inclusiva — 13 de novembro de 2026 */
+.mcd-event-featured{grid-column:1/-1;scroll-margin-top:110px}
+.mcd-event-featured .mcd-event-content{min-width:0}
+.mcd-event-featured .mcd-event-content h4{color:var(--navy);font-size:1.1rem;line-height:1.4;margin:24px 0 12px}
+.mcd-event-featured .mcd-event-content p{margin-bottom:16px}
+.mcd-event-featured>a{display:block;min-width:0}
