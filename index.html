@@ -4,6 +4,13 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Movimento Cidadão Diferente — informação, legislação, notícias, webinars e formação sobre deficiência e inclusão.">
 <title>Movimento Cidadão Diferente | MCD</title><link rel="stylesheet" href="style.css">
+<style id="mcd-counter-styles">
+.mcd-view-count{font-size:.875rem;line-height:1.5;color:inherit;opacity:.85;margin:.6rem 0 1rem}
+.mcd-view-count strong{font-variant-numeric:tabular-nums}
+footer{flex-wrap:wrap;gap:1rem}
+footer .mcd-view-count{margin:0}
+.mcd-counter-note{flex-basis:100%;font-size:.75rem}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -228,4 +235,89 @@ function showLawTab(area) {
 <section class="section mcd-partners" id="parceiros" aria-labelledby="parceiros-title"><p class="eyebrow">Colaboração institucional</p><h2 id="parceiros-title">Parceiros</h2><p class="section-lead">Entidades com as quais o Movimento Cidadão Diferente mantém relações de colaboração na promoção dos direitos, da inclusão e da qualidade de vida das pessoas com deficiência e das suas famílias.</p><div class="mcd-partner-grid"><article class="mcd-partner-card"><div class="mcd-partner-logo-wrap"><img src="/Logotipo_CMG_ver_pos.jpg?v=20261026" alt="Logótipo Câmara Municipal de Gondomar" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="mcd-partner-fallback" hidden>Câmara Municipal de Gondomar</span></div><a href="https://www.cm-gondomar.pt/" target="_blank" rel="noopener noreferrer">Conhecer entidade ↗</a></article><article class="mcd-partner-card"><div class="mcd-partner-logo-wrap"><img src="/logo2-03-e1620298445599.png?v=20261026" alt="Logótipo HUMANITAS" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="mcd-partner-fallback" hidden>HUMANITAS</span></div><a href="https://humanitas.org.pt/" target="_blank" rel="noopener noreferrer">Conhecer entidade ↗</a></article><article class="mcd-partner-card"><div class="mcd-partner-logo-wrap"><img src="/logo-a487f68a.webp?v=20261026" alt="Logótipo CERCI Chaves" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="mcd-partner-fallback" hidden>CERCI Chaves</span></div><a href="https://cercichaves.pt/" target="_blank" rel="noopener noreferrer">Conhecer entidade ↗</a></article><article class="mcd-partner-card"><div class="mcd-partner-logo-wrap"><img src="/logomarca.svg?v=20261026" alt="Logótipo CERCI Fafe (CERCIFAF)" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="mcd-partner-fallback" hidden>CERCI Fafe (CERCIFAF)</span></div><a href="https://www.cercifaf.pt/" target="_blank" rel="noopener noreferrer">Conhecer entidade ↗</a></article><article class="mcd-partner-card"><div class="mcd-partner-logo-wrap"><img src="/01%20Logo%20Principal.png?v=20261026" alt="Logótipo IDiPD" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="mcd-partner-fallback" hidden>IDiPD</span></div><a href="https://idipd.mtsss.gov.pt/" target="_blank" rel="noopener noreferrer">Conhecer entidade ↗</a></article></div></section>
 <section class="section contact" id="contactos"><p class="eyebrow">Contactos</p><h2>Estamos disponíveis para ouvir.</h2><p>Para informação, colaboração, propostas de temas ou participação nas iniciativas, contacte o Movimento Cidadão Diferente.</p><a class="email" href="mailto:geral@mcd-pt.org">geral@mcd-pt.org</a></section>
 </main><footer><span>© 2026 Movimento Cidadão Diferente</span><span>Direitos · Inclusão · Participação</span></footer>
+
+<script id="mcd-visitor-counters">
+(() => {
+  'use strict';
+  // Shared public counters. No visitor identifiers or credentials are stored here.
+  const endpoint = 'https://counterapi.com/api/mcd-pt.org/';
+  const format = new Intl.NumberFormat('pt-PT');
+  const seen = new Set();
+  function counter(label) {
+    const p = document.createElement('p');
+    p.className = 'mcd-view-count';
+    const value = document.createElement('strong');
+    value.textContent = '…';
+    p.append(value, document.createTextNode(' ' + label));
+    p.title = 'Contagem aproximada desde a instalação. Serviço externo CounterAPI; não comprova leitura integral.';
+    return { p, value };
+  }
+  async function record(action, key, output) {
+    const id = action + '/' + key;
+    if (seen.has(id)) return;
+    seen.add(id);
+    try {
+      const response = await fetch(endpoint + encodeURIComponent(action) + '/' + encodeURIComponent(key) + '?unique=true', {
+        credentials: 'omit', referrerPolicy: 'no-referrer', signal: AbortSignal.timeout(8000)
+      });
+      if (!response.ok) throw new Error('Counter unavailable');
+      const data = await response.json();
+      if (typeof data.value !== 'number' || !Number.isFinite(data.value) || data.value < 0) throw new Error('Invalid count');
+      output.textContent = format.format(data.value);
+    } catch (_) {
+      output.textContent = '—';
+      output.parentElement.title = 'Contagem temporariamente indisponível. Tente novamente mais tarde.';
+    }
+  }
+  const footer = document.querySelector('footer');
+  if (footer) {
+    const total = counter('visitantes (estimativa)');
+    footer.append(total.p);
+    const note = document.createElement('small');
+    note.className = 'mcd-counter-note';
+    note.textContent = 'Contagem desde a instalação · Estatísticas públicas por CounterAPI';
+    footer.append(note);
+    record('site', 'total', total.value);
+  }
+  // A news item only counts after its heading has been visible for one second.
+  const headings = new Map();
+  const pending = new Map();
+  const articles = document.querySelectorAll('#noticias .mcd-news-article[id]');
+  articles.forEach(article => {
+    const heading = article.querySelector('h3');
+    if (!heading) return;
+    const count = counter('visualizações (estimativa)');
+    heading.insertAdjacentElement('afterend', count.p);
+    headings.set(heading, { key: article.id, output: count.value });
+  });
+  if (!('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const heading = entry.target;
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5 && !document.hidden) {
+        if (pending.has(heading)) return;
+        pending.set(heading, setTimeout(() => {
+          pending.delete(heading);
+          if (document.hidden) return;
+          const item = headings.get(heading);
+          record('artigo', item.key, item.output);
+          observer.unobserve(heading);
+        }, 1000));
+      } else {
+        clearTimeout(pending.get(heading));
+        pending.delete(heading);
+      }
+    });
+  }, { threshold: [0, 0.5] });
+  headings.forEach((_, heading) => observer.observe(heading));
+  document.addEventListener('visibilitychange', () => {
+    pending.forEach(timer => clearTimeout(timer));
+    pending.clear();
+    if (!document.hidden) headings.forEach((_, heading) => {
+      observer.unobserve(heading);
+      observer.observe(heading);
+    });
+  });
+})();
+</script>
 </body></html>
