@@ -7,7 +7,7 @@
 <style id="mcd-counter-styles">
 .mcd-view-count{display:inline-block;font-size:.95rem;line-height:1.5;color:#174c54;background:#edf7f6;border:1px solid #b9dcd8;border-radius:8px;padding:.5rem .8rem;margin:.6rem 0 1rem}
 .mcd-site-visitors{padding:1rem 5%;background:#f3f8f8;text-align:center}.mcd-site-visitors h2{font-size:1.1rem;margin:0}.mcd-site-visitors small{display:block;color:#425c60}
-.mcd-view-count strong{font-variant-numeric:tabular-nums}
+.mcd-view-count strong{font-variant-numeric:tabular-nums}.mcd-view-count img{display:block;height:28px;width:auto;max-width:100%}
 footer{flex-wrap:wrap;gap:1rem}
 footer .mcd-view-count{margin:0}
 .mcd-counter-note{flex-basis:100%;font-size:.75rem}
@@ -22,6 +22,7 @@ footer .mcd-view-count{margin:0}
   </nav>
 </header>
 <main>
+<section class="mcd-site-visitors" id="visitantes" aria-labelledby="mcd-visitors-title"><h2 id="mcd-visitors-title">Visitas ao site</h2><p class="mcd-view-count" data-mcd-total>A carregar contagem…</p><small>Contagem desde 4 de novembro de 2026. Visitas e visualizações, não pessoas únicas. Serviço Hits.sh.</small><noscript>Ative o JavaScript para consultar os contadores.</noscript></section>
 <section class="hero" id="inicio"><div class="hero-copy"><p class="eyebrow">Uma sociedade onde todos contam</p><h1>Direitos reconhecidos. Inclusão vivida.</h1><div class="mcd-purpose" aria-label="Missão e visão do Movimento Cidadão Diferente"><div class="mcd-purpose-item"><h2>A nossa missão</h2><p>O <strong>Movimento Cidadão Diferente (MCD)</strong> tem como missão defender e promover os direitos e interesses das pessoas com deficiência e das suas famílias, com especial atenção àquelas que enfrentam maiores dificuldades no exercício autónomo dos seus direitos. Através do apoio, acompanhamento, orientação e representação, o Movimento procura contribuir para a melhoria da qualidade de vida das pessoas com deficiência em todas as suas dimensões, promovendo a sua inclusão social e familiar, a valorização individual e a realização pessoal e profissional.</p><p>A sua intervenção assenta na defesa da dignidade humana, na eliminação de todas as formas de discriminação e na promoção da igualdade de tratamento e de oportunidades, procurando assegurar que todas as pessoas com deficiência possam exercer plenamente os seus direitos e participar ativamente na sociedade. Neste sentido, o Movimento Cidadão Diferente assume o compromisso de dar voz às pessoas com deficiência e às suas famílias, sensibilizar a sociedade e os poderes públicos e contribuir para a construção de respostas e políticas que garantam uma inclusão efetiva, em conformidade com os princípios da Convenção sobre os Direitos das Pessoas com Deficiência.</p></div><div class="mcd-purpose-item"><h2>A nossa visão</h2><p>Uma sociedade inclusiva, justa e acessível, onde todas as pessoas com deficiência possam fazer escolhas, participar plenamente na comunidade e construir o seu projeto de vida em igualdade de condições com as demais. Queremos que a educação, a saúde, a proteção social e os apoios necessários sejam direitos efetivos em todo o território, sem discriminação nem barreiras económicas, sociais ou institucionais.</p></div></div><div class="actions"><a class="button primary" href="#legislacao">Consultar legislação</a><a class="button secondary" href="#agenda">Ver iniciativas</a></div></div><aside class="hero-panel"><img class="hero-poster" src="cartaz-identidade-mcd.jpg" alt="Cartaz do Movimento Cidadão Diferente, com crianças e mensagem de inclusão"><p class="panel-kicker">A diferença não pode ser uma barreira.</p><ul><li>Direitos e dignidade</li><li>Educação inclusiva</li><li>Apoio às famílias e cuidadores</li><li>Participação cívica</li></ul></aside></section>
 <section class="section" id="educacao-inclusiva" aria-labelledby="guia-inclusao-titulo">
 <style>.inclusao-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:2rem;align-items:start}.inclusao-cartaz{width:100%;height:auto;max-width:440px;border-radius:16px}.inclusao-topicos{margin-top:2rem;max-width:1000px}.inclusao-topicos details{background:#f2f9fc;border:1px solid #c9e2ec;border-radius:12px;margin:12px 0;padding:18px 22px}.inclusao-topicos summary{cursor:pointer;font-size:1.12rem;font-weight:700;color:#07557c}.inclusao-topicos details p,.inclusao-topicos details li{line-height:1.75}.inclusao-topicos h4{margin-top:1.3rem}.inclusao-topicos table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.95rem}.inclusao-topicos th,.inclusao-topicos td{padding:12px;text-align:left;border:1px solid #c9e2ec;vertical-align:top}.inclusao-topicos thead{background:#dceef6}.inclusao-topicos caption{text-align:left;font-weight:700;margin-bottom:10px}.inclusao-fontes{margin-top:2rem;overflow-wrap:anywhere}@media(max-width:700px){.inclusao-intro{grid-template-columns:1fr}.inclusao-cartaz{max-width:100%}.inclusao-topicos details{padding:16px}}</style>
@@ -240,74 +241,46 @@ function showLawTab(area) {
 <script id="mcd-visitor-counters">
 (() => {
   'use strict';
-  // Shared public counters. No visitor identifiers or credentials are stored here.
-  const endpoint = 'https://counterapi.com/api/mcd-pt.org/';
-  const format = new Intl.NumberFormat('pt-PT');
-  const seen = new Set();
-  function counter(label) {
-    const p = document.createElement('p');
-    p.className = 'mcd-view-count';
-    const value = document.createElement('strong');
-    value.textContent = 'A aguardar contagem';
-    p.append(value, document.createTextNode(' ' + label));
-    p.title = 'Contagem aproximada desde a instalação. Serviço externo CounterAPI; não comprova leitura integral.';
-    return { p, value };
+  const base = 'https://hits.sh/mcd-pt.org/';
+  function loadBadge(container, key, label) {
+    if (container.dataset.loaded) return;
+    container.dataset.loaded = 'true';
+    const img = document.createElement('img');
+    img.alt = label;
+    img.height = 28;
+    img.referrerPolicy = 'no-referrer';
+    img.onload = () => container.replaceChildren(img);
+    img.onerror = () => {
+      container.textContent = 'Contagem temporariamente indisponível';
+      delete container.dataset.loaded;
+    };
+    img.src = base + key + '.svg?label=' + encodeURIComponent(label) + '&color=167c80&labelColor=234b58&style=flat-square';
   }
-  async function record(action, key, output) {
-    const id = action + '/' + key;
-    if (seen.has(id)) return;
-    seen.add(id);
-    try {
-      const response = await fetch(endpoint + encodeURIComponent(action) + '/' + encodeURIComponent(key) + '?unique=true', {
-        credentials: 'omit', referrerPolicy: 'no-referrer', signal: AbortSignal.timeout(8000)
-      });
-      if (!response.ok) throw new Error('Counter unavailable');
-      const data = await response.json();
-      if (typeof data.value !== 'number' || !Number.isFinite(data.value) || data.value < 0) throw new Error('Invalid count');
-      output.textContent = format.format(data.value);
-    } catch (_) {
-      output.textContent = 'Contagem indisponível';
-      output.parentElement.title = 'Contagem temporariamente indisponível. Tente novamente mais tarde.';
-    }
-  }
-  const footer = document.querySelector('footer');
-  if (footer) {
-    const total = counter('visitantes (estimativa)');
-    const panel = document.createElement('section');
-    panel.className = 'mcd-site-visitors';
-    panel.id = 'visitantes';
-    const title = document.createElement('h2');
-    title.textContent = 'Visitantes do site';
-    panel.append(title, total.p);
-    document.querySelector('main').prepend(panel);
-    const note = document.createElement('small');
-    note.className = 'mcd-counter-note';
-    note.textContent = 'Contagem desde a instalação · Estatísticas públicas por CounterAPI';
-    panel.append(note);
-    record('site', 'total', total.value);
-  }
-  // A news item only counts after its heading has been visible for one second.
-  const headings = new Map();
+  const total = document.querySelector('[data-mcd-total]');
+  if (total) loadBadge(total, 'visitas', 'Visitas ao site');
   const pending = new Map();
-  const articles = document.querySelectorAll('#noticias .mcd-news-article[id]');
-  articles.forEach(article => {
+  const items = new Map();
+  document.querySelectorAll('#noticias .mcd-news-article[id]').forEach(article => {
     const heading = article.querySelector('h3');
     if (!heading) return;
-    const count = counter('visualizações (estimativa)');
-    heading.insertAdjacentElement('afterend', count.p);
-    headings.set(heading, { key: article.id, output: count.value });
+    const count = document.createElement('p');
+    count.className = 'mcd-view-count';
+    count.textContent = 'Visualizações: a aguardar apresentação do artigo';
+    count.title = 'Regista uma visualização quando o título permanece visível durante um segundo. Não mede leitores únicos nem leitura integral.';
+    heading.insertAdjacentElement('afterend', count);
+    items.set(heading, { count, key: 'artigos/' + encodeURIComponent(article.id) });
   });
   if (!('IntersectionObserver' in window)) return;
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const heading = entry.target;
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.5 && !document.hidden) {
+      if (entry.isIntersecting && entry.intersectionRatio >= .5 && !document.hidden) {
         if (pending.has(heading)) return;
         pending.set(heading, setTimeout(() => {
           pending.delete(heading);
           if (document.hidden) return;
-          const item = headings.get(heading);
-          record('artigo', item.key, item.output);
+          const item = items.get(heading);
+          loadBadge(item.count, item.key, 'Visualizações');
           observer.unobserve(heading);
         }, 1000));
       } else {
@@ -315,14 +288,13 @@ function showLawTab(area) {
         pending.delete(heading);
       }
     });
-  }, { threshold: [0, 0.5] });
-  headings.forEach((_, heading) => observer.observe(heading));
+  }, { threshold: [0, .5] });
+  items.forEach((_, heading) => observer.observe(heading));
   document.addEventListener('visibilitychange', () => {
     pending.forEach(timer => clearTimeout(timer));
     pending.clear();
-    if (!document.hidden) headings.forEach((_, heading) => {
-      observer.unobserve(heading);
-      observer.observe(heading);
+    if (!document.hidden) items.forEach((item, heading) => {
+      if (!item.count.dataset.loaded) { observer.unobserve(heading); observer.observe(heading); }
     });
   });
 })();
