@@ -12,6 +12,12 @@ footer{flex-wrap:wrap;gap:1rem}
 footer .mcd-view-count{margin:0}
 .mcd-counter-note{flex-basis:100%;font-size:.75rem}
 </style>
+<style id="mcd-about-layout">
+.mcd-about-tabs{display:flex;flex-wrap:wrap;gap:8px}
+.mcd-about-tabs .law-tab{min-height:44px}
+.mcd-about-content p{max-width:78ch;line-height:1.8}
+@media(max-width:700px){.mcd-about-tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;max-width:100%;padding:5px 3px 12px;scroll-snap-type:x proximity}.mcd-about-tabs .law-tab{flex:0 0 auto;width:auto;max-width:85vw;white-space:normal;text-align:left;scroll-snap-align:start}.mcd-about-content{padding:18px}.mcd-about-content p{font-size:16px}}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -41,13 +47,55 @@ footer .mcd-view-count{margin:0}
 <details><summary>13. Que aspetos dependem de regulamentação?</summary><ul><li>Organização, funcionamento e competências do SNAI;</li><li>Cooperação entre escolas de suporte e ELAI;</li><li>Regulação dos CCAI;</li><li>Funcionamento, organização, acreditação e intervenção dos CRI;</li><li>Indicadores estatísticos de avaliação da política de inclusão.</li></ul><p>A concretização deve ser consultada nos diplomas regulamentares e orientações oficiais. Os manuais e guias anteriores devem ser lidos à luz das alterações legislativas e respetivas atualizações.</p></details>
 </div><div class="inclusao-fontes"><h3>Referências e documentos de consulta</h3><p>Salvo indicação em contrário, os artigos citados pertencem ao Decreto-Lei n.º 54/2018, na redação dada pelo Decreto-Lei n.º 208/2026. Informação organizada em 3 de novembro de 2026.</p><ul><li><a href="https://data.dre.pt/eli/dec-lei/208/2026/11/03/p/dre" target="_blank" rel="noopener noreferrer">Decreto-Lei n.º 208/2026 — Diário da República</a></li><li><a href="https://eduqa.pt/documentos/" target="_blank" rel="noopener noreferrer">EduQA — Documentos e Legislação</a></li><li><a href="https://agse.pt/documentos/" target="_blank" rel="noopener noreferrer">AGSE — Documentos e Legislação</a></li><li><a href="https://educacaoinclusiva.dge.mec.pt/publicacoes-nacionais" target="_blank" rel="noopener noreferrer">Educação Inclusiva — Manual de Apoio à Prática e guia de monitorização</a></li><li><a href="https://educacaoinclusiva.dge.mec.pt/noticias/avaliacao-da-educacao-inclusiva" target="_blank" rel="noopener noreferrer">Relatório Avaliação da Educação Inclusiva — dezembro de 2025, anterior à alteração legislativa</a></li></ul></div></section>
 <section class="section" id="quem-somos">
-<p class="eyebrow">Quem somos</p>
-<div class="law-tabs" role="tablist" aria-label="Informação institucional">
-<button class="law-tab active" role="tab" id="about-tab-mensagem" aria-controls="about-panel-mensagem" aria-selected="true" onclick="showAboutTab('mensagem')">Mensagem da Direção</button>
+<p class="eyebrow">O Movimento</p><h2>Quem somos</h2>
+<div class="law-tabs mcd-about-tabs" role="tablist" aria-label="Informação institucional">
+<button class="law-tab active" type="button" role="tab" id="about-tab-apresentacao" aria-controls="about-panel-apresentacao" aria-selected="true" tabindex="0" onclick="showAboutTab('apresentacao')">Quem somos</button>
+<button class="law-tab" type="button" role="tab" id="about-tab-visao" aria-controls="about-panel-visao" aria-selected="false" tabindex="-1" onclick="showAboutTab('visao')">Visão</button>
+<button class="law-tab" type="button" role="tab" id="about-tab-valores" aria-controls="about-panel-valores" aria-selected="false" tabindex="-1" onclick="showAboutTab('valores')">Valores</button>
+<button class="law-tab" type="button" role="tab" id="about-tab-pessoas-familias" aria-controls="about-panel-pessoas-familias" aria-selected="false" tabindex="-1" onclick="showAboutTab('pessoas-familias')">Pessoas, famílias e participação</button>
+<button class="law-tab" type="button" role="tab" id="about-tab-como-trabalhamos" aria-controls="about-panel-como-trabalhamos" aria-selected="false" tabindex="-1" onclick="showAboutTab('como-trabalhamos')">Como trabalhamos</button>
+<button class="law-tab" type="button" role="tab" id="about-tab-percurso" aria-controls="about-panel-percurso" aria-selected="false" tabindex="-1" onclick="showAboutTab('percurso')">O nosso percurso</button>
+<button class="law-tab" type="button" role="tab" id="about-tab-informacao-participacao" aria-controls="about-panel-informacao-participacao" aria-selected="false" tabindex="-1" onclick="showAboutTab('informacao-participacao')">Informação e participação</button>
+<button class="law-tab" type="button" role="tab" id="about-tab-colaboracao" aria-controls="about-panel-colaboracao" aria-selected="false" tabindex="-1" onclick="showAboutTab('colaboracao')">Colaboração institucional</button>
+<button class="law-tab" type="button" role="tab" id="about-tab-ods" aria-controls="about-panel-ods" aria-selected="false" tabindex="-1" onclick="showAboutTab('ods')">ODS</button>
+<button class="law-tab" role="tab" id="about-tab-mensagem" aria-controls="about-panel-mensagem" aria-selected="false" tabindex="-1" onclick="showAboutTab('mensagem')">Mensagem da Direção</button>
 <button class="law-tab" role="tab" id="about-tab-estatutos" aria-controls="about-panel-estatutos" aria-selected="false" onclick="showAboutTab('estatutos')">Estatutos</button>
 <button class="law-tab" role="tab" id="about-tab-organograma" aria-controls="about-panel-organograma" aria-selected="false" onclick="showAboutTab('organograma')">Organograma</button>
 </div>
-<div class="law-panel active" id="about-panel-mensagem" role="tabpanel" aria-labelledby="about-tab-mensagem">
+<div class="law-panel active mcd-about-content" id="about-panel-apresentacao" role="tabpanel" aria-labelledby="about-tab-apresentacao" tabindex="0"><h3>Quem somos</h3><p>Começámos como um grupo de famílias, num período difícil, à procura de respostas para problemas muito concretos. Pensávamos que seria uma mobilização temporária.</p>
+<p>Foram-se juntando outras famílias, de Norte a Sul do país, com experiências e percursos diferentes. E tornou-se claro que muitos dos problemas não eram pontuais nem isolados. Repetiam-se: respostas que não se ligavam entre si, mudanças de serviço ou de idade que interrompiam apoios, decisões tomadas sem informação suficiente sobre a pessoa e famílias que acabavam por fazer a ligação entre tudo.</p>
+<p>Criámos um movimento da sociedade civil para partilhar experiências, identificar questões comuns e levá-las à discussão pública. Com o tempo, esse trabalho ganhou continuidade, interlocutores e responsabilidade. Evoluímos, por isso, para uma associação sem fins lucrativos.</p>
+<p>O Movimento Cidadão Diferente reúne pessoas com deficiência, famílias, cuidadores, profissionais e cidadãos. Trabalhamos em temas que atravessam diferentes momentos da vida: educação, saúde, proteção social, habitação, mobilidade, emprego, participação e cuidados.</p>
+<p>Defendemos que as respostas não devem limitar-se a resolver uma necessidade imediata. Devem permitir que cada pessoa tenha um percurso com continuidade, relações, participação.</p>
+<p>É a partir daqui que participamos no debate público. Ligamos experiências que chegam separadas, ouvimos quem vive estas realidades e quem trabalha no terreno, e levamos questões, contributos e propostas aos espaços onde se decide.</p></div>
+<div class="law-panel mcd-about-content" id="about-panel-visao" role="tabpanel" aria-labelledby="about-tab-visao" tabindex="0" hidden><h3>Visão</h3><p>Uma sociedade onde viver com deficiência não dependa do lugar onde se vive, da escola ou do serviço que se encontra, nem da capacidade de uma família para insistir.</p>
+<p>Uma sociedade onde cada pessoa possa participar nas decisões sobre a sua vida e ter apoios que acompanhem o seu percurso, da infância à vida adulta.</p></div>
+<div class="law-panel mcd-about-content" id="about-panel-valores" role="tabpanel" aria-labelledby="about-tab-valores" tabindex="0" hidden><h3>Valores</h3><p>O MCD parte do respeito pelas pessoas e pelas famílias e da atenção ao que vivem todos os dias. Defendemos a autodeterminação e a autonomia, entendidas como a possibilidade de cada pessoa participar nas escolhas sobre a sua vida, com os apoios de que necessita.</p>
+<p>Não existe uma única forma de viver com deficiência, nem uma hierarquia entre deficiências. As pessoas comunicam, participam e precisam de apoio de formas diferentes, em diferentes momentos das suas vidas.</p>
+<p>Algumas necessitam de adaptações pontuais; outras, de apoio regular ou permanente. As respostas não podem ser iguais para todos, nem ficar limitadas ao que cada serviço tem disponível. Devem ser adequadas à pessoa, às suas necessidades e ao seu projeto de vida.</p>
+<p>Para o MCD, igualdade não é dar o mesmo a todos. É garantir que cada pessoa tem o seu projeto de vida.</p>
+<p>Isso exige famílias ouvidas, equidade no acesso aos direitos e responsabilidade de quem organiza os serviços públicos. É com rigor e diálogo que procuramos contribuir para essa mudança.</p></div>
+<div class="law-panel mcd-about-content" id="about-panel-pessoas-familias" role="tabpanel" aria-labelledby="about-tab-pessoas-familias" tabindex="0" hidden><h3>Pessoas, famílias e participação</h3><p>A pessoa com deficiência deve participar nas decisões que lhe dizem respeito, com os apoios necessários para comunicar, compreender, escolher e fazer-se ouvir.</p>
+<p>Reconhecemos também o lugar das famílias. Não para ocupar o lugar da pessoa ou decidir por ela, mas porque, em muitas situações, conhecem a sua forma de comunicar, o seu quotidiano, o seu percurso e as condições de que depende a sua vida.</p>
+<p>Quando uma pessoa necessita de apoio mais significativo para comunicar, compreender ou expressar escolhas, a família pode ser essencial para que a sua perspetiva não fique ausente das decisões. Ouvir a família não retira autodeterminação à pessoa com deficiência. Pode ser precisamente o que permite que ela seja conhecida, respeitada e incluída.</p>
+<p>Não defendemos soluções iguais para todos. Defendemos que cada pessoa tenha respostas adequadas às suas necessidades e ao seu projeto de vida.</p></div>
+<div class="law-panel mcd-about-content" id="about-panel-como-trabalhamos" role="tabpanel" aria-labelledby="about-tab-como-trabalhamos" tabindex="0" hidden><h3>Como trabalhamos</h3><p>Ligamos experiências que chegam separadas, ouvimos quem vive estas realidades e quem trabalha no terreno, e cruzamos essa informação com as políticas públicas e os serviços existentes.</p>
+<p>Participamos em consultas públicas, reuniões institucionais, iniciativas locais e espaços de debate. Levamos questões, contributos e propostas concretas a quem tem responsabilidade de decidir.</p>
+<p>Não para substituir os serviços ou as entidades públicas, mas para contribuir para que as respostas sejam pensadas para as pessoas com deficiência e as famílias que delas precisam.</p></div>
+<div class="law-panel mcd-about-content" id="about-panel-percurso" role="tabpanel" aria-labelledby="about-tab-percurso" tabindex="0" hidden><h3>O nosso percurso</h3><p>Ao longo destes anos, o MCD tem chamado a atenção para os atrasos nas juntas médicas para atribuição e renovação do Atestado Médico de Incapacidade Multiusos, para dificuldades no transporte escolar, para a falta de continuidade nos apoios especializados e para obstáculos no acesso à saúde.</p>
+<p>Tem também apresentado preocupações e propostas sobre educação inclusiva, Prestação Social para a Inclusão, Subsídio de Educação Especial, estatuto do cuidador informal, produtos de apoio e comparticipações familiares nos CACI.</p>
+<p>Procuramos que as respostas públicas tenham em conta as necessidades de apoio de cada pessoa, o impacto económico e social da deficiência nas famílias e a necessidade de continuidade ao longo da vida.</p></div>
+<div class="law-panel mcd-about-content" id="about-panel-informacao-participacao" role="tabpanel" aria-labelledby="about-tab-informacao-participacao" tabindex="0" hidden><h3>Informação e participação</h3><p>Promovemos webinars, conferências, sessões de esclarecimento e outros momentos de partilha sobre direitos, educação inclusiva, proteção social, cuidados e respostas sociais.</p>
+<p>A informação é importante, mas não chega por si só. Serve para que as pessoas e as famílias possam participar, questionar, tomar decisões e contribuir para a construção de respostas melhores.</p></div>
+<div class="law-panel mcd-about-content" id="about-panel-colaboracao" role="tabpanel" aria-labelledby="about-tab-colaboracao" tabindex="0" hidden><h3>Colaboração institucional</h3><p>A defesa dos direitos das pessoas com deficiência exige trabalho conjunto entre a sociedade civil, as instituições e os poderes públicos.</p>
+<p>O MCD participa no Conselho Local de Ação Social de Gondomar e trabalha em articulação com outras associações, movimentos de famílias e entidades com intervenção nestas áreas. Mantém relações de colaboração, entre outras, com a HUMANITAS, a ASSOL, o IDiPD, a CONFAP, a FAPAG e a Câmara Municipal de Gondomar.</p>
+<p>Mantém igualmente diálogo com grupos parlamentares, ministérios, secretarias de Estado e outros responsáveis públicos, levando aos espaços de decisão questões que chegam através das pessoas e das famílias.</p></div>
+<div class="law-panel mcd-about-content" id="about-panel-ods" role="tabpanel" aria-labelledby="about-tab-ods" tabindex="0" hidden><h3>ODS</h3><p>O trabalho do MCD está alinhado com vários Objetivos de Desenvolvimento Sustentável.</p>
+<p>Defendemos o direito à saúde e a apoios que tenham continuidade, no âmbito do ODS 3; uma educação inclusiva que funcione na prática, no âmbito do ODS 4; e percursos que não terminem com a escola, mas incluam a vida adulta e o trabalho, no âmbito do ODS 8.</p>
+<p>A redução das desigualdades, prevista no ODS 10, está no centro do que fazemos. O acesso aos direitos não pode depender do sítio onde se vive, da escola que se frequenta ou da capacidade de uma família para insistir.</p>
+<p>Falamos também de acessibilidade, mobilidade, habitação e participação na comunidade, em linha com o ODS 11. E insistimos na necessidade de serviços públicos que ouçam, respondam e trabalhem em conjunto, como pressupõem os ODS 16 e 17.</p>
+<p>A vida de uma pessoa não se divide entre educação, saúde, Segurança Social e município. As respostas também não deviam dividir-se.</p></div>
+<div class="law-panel" id="about-panel-mensagem" role="tabpanel" aria-labelledby="about-tab-mensagem" hidden>
 <p class="eyebrow">Mensagem da Direção</p>
 <h2>Dar voz aos direitos. Acompanhar as famílias. Promover a mudança.</h2>
 <p>Fundado em dezembro de 2019, o <strong>Movimento Cidadão Diferente (MCD)</strong> nasceu da determinação de defender os direitos das pessoas com deficiência e das suas famílias, dar visibilidade às dificuldades que enfrentam e contribuir para a construção de uma sociedade mais justa, inclusiva e solidária.</p>
@@ -110,6 +158,7 @@ function showAboutTab(area) {
     var active = tab.id === 'about-tab-' + area;
     tab.classList.toggle('active', active);
     tab.setAttribute('aria-selected', active ? 'true' : 'false');
+    tab.setAttribute('tabindex', active ? '0' : '-1');
   });
   document.querySelectorAll('[id^="about-panel-"]').forEach(function(panel) {
     var active = panel.id === 'about-panel-' + area;
@@ -117,6 +166,20 @@ function showAboutTab(area) {
     panel.hidden = !active;
   });
 }
+document.querySelector('.mcd-about-tabs').addEventListener('keydown', function(event) {
+  var tabs = Array.from(this.querySelectorAll('[role="tab"]'));
+  var index = tabs.indexOf(document.activeElement);
+  if (index < 0) return;
+  var next;
+  if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+  else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+  else if (event.key === 'Home') next = 0;
+  else if (event.key === 'End') next = tabs.length - 1;
+  else return;
+  event.preventDefault();
+  showAboutTab(tabs[next].id.replace('about-tab-', ''));
+  tabs[next].focus();
+});
 </script>
 </section>
 <section class="section focus" id="noticias"><p class="eyebrow">Atualidade</p><h2>Notícias e comunicados.</h2><p class="section-lead">Acompanhe as posições públicas, iniciativas e propostas do Movimento Cidadão Diferente.</p><article class="mcd-news-article" id="webinar-educacao-inclusiva-youtube"><div class="mcd-news-poster-wrap"><a href="Educa%C3%A7%C3%A3o%20inclusiva%20em%20direto%20no%20YouTube.png" target="_blank" rel="noopener"><img class="mcd-news-poster" src="Educa%C3%A7%C3%A3o%20inclusiva%20em%20direto%20no%20YouTube.png" alt="Webinar Educação Inclusiva: inscrições encerradas após atingir 1.000 inscritos. Transmissão em direto no YouTube em 13 de novembro de 2026, das 21h00 às 23h30." loading="lazy"></a></div>
