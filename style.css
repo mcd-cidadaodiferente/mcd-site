@@ -229,3 +229,29 @@ footer{background:#172c43;border-top-color:#e58a34;padding-top:28px;padding-bott
   .brand-mark{width:36px;height:36px}
   .mcd-partner-grid{grid-template-columns:minmax(0,1fr)}
 }
+
+/* Identidade cromática do Movimento Cidadão Diferente. */
+:root{--blue:#079bd3;--green:#79ad35;--orange:#f28b24;--pink:#d94391;--gold:#f28b24;--teal:#4f7d20;--navy:#202124;--ink:#252525;--muted:#52606b;--paper:#f8faf7}
+.site-header{border-bottom:4px solid transparent;border-image:linear-gradient(90deg,var(--orange) 0 25%,var(--green) 25% 50%,var(--blue) 50% 75%,var(--pink) 75%) 1}
+.hero{background:linear-gradient(125deg,#fff7ed 0%,#f5faed 35%,#edf8fd 70%,#fdf0f7 100%)}
+.hero h1,.section h2{color:#252525}
+.hero .eyebrow,.eyebrow{color:#4f7d20}
+.menu-toggle{background:#087da9}
+.primary{background:#f28b24;color:#252525}.primary:hover{background:#df7514;color:#202124}
+.secondary{color:#086b90;border-color:#079bd3}
+.light{background:#79ad35;color:#202124}
+.law-tab.active{background:#087da9;border-color:#087da9}
+.nav a:hover,.nav a:focus-visible{color:#087da9;border-bottom-color:#d94391}
+.focus{background:#f6faef}
+#noticias{background:linear-gradient(135deg,#edf8fd,#fff 55%,#fdf0f7)}
+#noticias>h2{border-left:5px solid #079bd3;padding-left:14px}
+.mcd-news-article{border-top:4px solid #079bd3;margin-top:24px}
+.mcd-news-article:nth-of-type(4n+2){border-top-color:#79ad35}
+.mcd-news-article:nth-of-type(4n+3){border-top-color:#f28b24}
+.mcd-news-article:nth-of-type(4n+4){border-top-color:#d94391}
+.mcd-news-body a:not(.button){color:#086b90;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.join{background:linear-gradient(110deg,#f4fae9,#edf8fd 55%,#fdf0f7)}
+.mcd-site-visitors{background:#edf8fd}
+.mcd-event-card{border-top:4px solid #f28b24}
+.values article{border-top-color:#79ad35}
+footer{border-top:5px solid transparent;border-image:linear-gradient(90deg,#f28b24 0 25%,#79ad35 25% 50%,#079bd3 50% 75%,#d94391 75%) 1;background:#252525}
