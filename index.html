@@ -544,23 +544,17 @@ document.querySelector('.mcd-about-tabs').addEventListener('keydown', function(e
 <h3>Crédito à habitação bonificado para pessoas com deficiência</h3>
 <p><strong>Guia do Movimento Cidadão Diferente · Atualizado em 18 de novembro de 2026</strong></p>
 <p>O Estado pode suportar parte dos juros do crédito à habitação própria e permanente de uma pessoa com <strong>incapacidade igual ou superior a 60%</strong>. Este regime pode ajudar a comprar casa, a financiar obras de acessibilidade ou a reduzir os juros de um empréstimo que já esteja a pagar, quando a incapacidade foi adquirida depois de assinar o contrato.</p>
-<div class="law-tabs" role="tablist" aria-label="Temas do guia de crédito à habitação">
-<button class="law-tab active" type="button" role="tab" id="credit-topic-1" aria-controls="credit-content-1" aria-selected="true" tabindex="0">Quem pode beneficiar</button>
-<button class="law-tab" type="button" role="tab" id="credit-topic-2" aria-controls="credit-content-2" aria-selected="false" tabindex="-1">O que pode financiar</button>
-<button class="law-tab" type="button" role="tab" id="credit-topic-3" aria-controls="credit-content-3" aria-selected="false" tabindex="-1">Pedido ao banco</button>
-<button class="law-tab" type="button" role="tab" id="credit-topic-4" aria-controls="credit-content-4" aria-selected="false" tabindex="-1">Limites e custos</button>
-<button class="law-tab" type="button" role="tab" id="credit-topic-5" aria-controls="credit-content-5" aria-selected="false" tabindex="-1">Cálculo da poupança</button>
-<button class="law-tab" type="button" role="tab" id="credit-topic-6" aria-controls="credit-content-6" aria-selected="false" tabindex="-1">Venda antes de cinco anos</button>
-<button class="law-tab" type="button" role="tab" id="credit-topic-7" aria-controls="credit-content-7" aria-selected="false" tabindex="-1">Pergunta ao banco</button>
-<button class="law-tab" type="button" role="tab" id="credit-topic-8" aria-controls="credit-content-8" aria-selected="false" tabindex="-1">Fontes oficiais</button>
-</div>
-<section id="credit-content-1" role="tabpanel" aria-labelledby="credit-topic-1" tabindex="0">
+<div class="law-list">
+<section class="law-item" id="credit-content-1">
+<div>
 <h4>Quem pode beneficiar?</h4>
 <p>A pessoa com deficiência deve ser maior de 18 anos, ter um <strong>Atestado Médico de Incapacidade Multiúso (AMIM)</strong> que comprove pelo menos 60% de incapacidade e ser titular ou cotitular do empréstimo. A casa deve destinar-se a habitação própria e permanente e o imóvel financiado é dado como garantia através de hipoteca.</p>
 <p>O empréstimo não pode servir para comprar um imóvel que pertença a um ascendente ou descendente do interessado. Em regra, nenhum membro do agregado pode ter outro crédito à habitação bonificado. A lei prevê exceções, por exemplo para ampliar ou beneficiar a casa já financiada ou para adquirir ou construir nova habitação quando a anterior se tornou inadequada por alteração do agregado familiar ou transferência do local de trabalho. Nesses casos, aplicam-se os limites ao conjunto dos empréstimos.</p>
 <p><strong>Se o atestado for do seu filho</strong>, a existência de uma pessoa com deficiência no agregado não dá, por si só, acesso ao regime a quem contrata o crédito. Se o filho for menor ou se o crédito estiver apenas em nome dos pais, o atestado do filho não permite beneficiar do regime. Se o filho for adulto e reunir as condições para ser titular ou cotitular, a família pode pedir ao banco que avalie uma contratação conjunta.</p>
+</div>
 </section>
-<section id="credit-content-2" role="tabpanel" aria-labelledby="credit-topic-2" tabindex="0" hidden>
+<section class="law-item" id="credit-content-2">
+<div>
 <h4>O que pode financiar?</h4>
 <ul>
 <li><strong>Comprar, construir, ampliar ou fazer obras</strong> de conservação ou beneficiação na habitação própria e permanente, incluindo obras para adaptar a casa.</li>
@@ -568,8 +562,10 @@ document.querySelector('.mcd-about-tabs').addEventListener('keydown', function(e
 <li><strong>Comprar uma garagem individual ou um lugar de estacionamento numa garagem coletiva</strong> no âmbito do financiamento da habitação.</li>
 <li><strong>Fazer obras nas partes comuns do prédio</strong> para cumprir as normas técnicas de acessibilidade. Por exemplo, adaptar a entrada do edifício. O financiamento destas obras está sujeito às regras de permilagem previstas no artigo 2.º da lei.</li>
 </ul>
+</div>
 </section>
-<section id="credit-content-3" role="tabpanel" aria-labelledby="credit-topic-3" tabindex="0" hidden>
+<section class="law-item" id="credit-content-3">
+<div>
 <h4>Como pedir ao banco?</h4>
 <h5>Se vai contratar um crédito novo</h5>
 <p>Peça uma simulação ao abrigo da <strong>Lei n.º 64/2014, de 26 de agosto</strong>. O banco avalia a capacidade financeira e decide se concede o empréstimo. Para instruir o pedido, a lei prevê o AMIM, a última nota de liquidação de IRS ou documento oficial das Finanças em caso de dispensa, e uma declaração sob compromisso de honra relativa a outros créditos bonificados e à autorização de acesso às informações necessárias à fiscalização. O banco pode pedir documentação adicional para avaliar o financiamento.</p>
@@ -578,19 +574,25 @@ document.querySelector('.mcd-about-tabs').addEventListener('keydown', function(e
 <p><strong>Modelo de pedido ao banco</strong></p>
 <blockquote><p>Solicito a migração do meu contrato de crédito à habitação n.º [número do contrato] para o regime de crédito bonificado para pessoas com deficiência, nos termos do artigo 6.º da Lei n.º 64/2014, de 26 de agosto. Adquiri, após a celebração do contrato, um grau de incapacidade de [percentagem]%, conforme atestado médico de incapacidade multiúso que junto. Solicito resposta escrita e indicação da nova prestação e dos encargos associados à conversão.</p></blockquote>
 <p>Guarde o comprovativo de entrega. Se o pedido for recusado, solicite a fundamentação por escrito.</p>
+</div>
 </section>
-<section id="credit-content-4" role="tabpanel" aria-labelledby="credit-topic-4" tabindex="0" hidden>
+<section class="law-item" id="credit-content-4">
+<div>
 <h4>Quanto posso financiar e que custos devo prever?</h4>
 <p>Em <strong>2026</strong>, o teto do empréstimo abrangido pelo regime é de <strong>238 273,23 €</strong>, atualizado anualmente. Aplica-se também o limite de <strong>90%</strong> do valor da habitação ou do custo das obras abrangidas, segundo a avaliação do banco, e o rácio entre o empréstimo e o valor da garantia não pode ultrapassar 90%. Se a avaliação da casa for de 200 000 €, este rácio limita o financiamento a 180 000 €, podendo o montante aprovado ser inferior.</p>
 <p>Na conversão, o capital em dívida tem de respeitar os limites aplicáveis. O prazo máximo legal é de 50 anos. Na conversão contam também os anos já decorridos do empréstimo anterior. Nos empréstimos para construção e obras, a utilização integral do crédito deve ocorrer até dois anos após a assinatura do contrato.</p>
 <p>Peça uma simulação escrita que discrimine a prestação, o custo total, os seguros, as comissões e os encargos de formalização e registo. Num crédito novo podem existir despesas de escritura ou de outra forma de formalização. Na conversão, peça ao banco que identifique os custos concretos do seu processo. A lei não exige seguro de vida para acesso ao regime. Se o banco o pedir como garantia, pode escolher a seguradora.</p>
+</div>
 </section>
-<section id="credit-content-5" role="tabpanel" aria-labelledby="credit-topic-5" tabindex="0" hidden>
+<section class="law-item" id="credit-content-5">
+<div>
 <h4>Como se calcula a poupança?</h4>
 <p>A lei manda usar a taxa de referência para o cálculo das bonificações, fixada em <strong>4,5%</strong> pela Portaria n.º 502/2003, ou a taxa contratada se for inferior. A esse valor subtraem-se <strong>65% da taxa das operações principais de refinanciamento do Banco Central Europeu</strong>. A bonificação incide sobre o capital em dívida.</p>
 <p><strong>Exemplo com taxas hipotéticas.</strong> Se a taxa contratada for de 3,5% e a taxa do BCE for de 2,5%, 65% da taxa do BCE corresponde a 1,625%. A bonificação será de <strong>1,875 pontos percentuais</strong>. Neste exemplo, o cliente suporta juros a uma taxa de 1,625%. A poupança em euros depende do capital em dívida, das taxas, do prazo e dos custos. Peça ao banco uma comparação da prestação e do custo total. Ao longo do empréstimo, a diferença pode chegar a milhares de euros.</p>
+</div>
 </section>
-<section id="credit-content-6" role="tabpanel" aria-labelledby="credit-topic-6" tabindex="0" hidden>
+<section class="law-item" id="credit-content-6">
+<div>
 <h4>E se precisar de vender a casa antes de cinco anos?</h4>
 <p>Na compra ou construção com crédito bonificado, a venda antes de decorridos cinco anos da assinatura do contrato implica, em regra, a devolução das bonificações recebidas <strong>acrescidas de 10%</strong>. A lei prevê exceções comprovadas:</p>
 <ul>
@@ -601,20 +603,26 @@ document.querySelector('.mcd-about-tabs').addEventListener('keydown', function(e
 </ul>
 <p>Nas duas últimas situações, a lei exige que o produto da venda seja aplicado na compra ou construção de nova habitação própria e permanente no prazo de um ano, até ao valor da nova habitação.</p>
 <p><strong>E se a casa deixar de ser acessível?</strong> A perda de mobilidade física, a necessidade de obras de adaptação ou reconstrução e a mudança para uma casa acessível, por si só, não constam das exceções do artigo 10.º. Antes de assumir um compromisso de venda, peça ao banco que confirme por escrito se o caso cabe numa das exceções legais e quanto teria de devolver.</p>
+</div>
 </section>
-<section id="credit-content-7" role="tabpanel" aria-labelledby="credit-topic-7" tabindex="0" hidden>
+<section class="law-item" id="credit-content-7">
+<div>
 <h4>A pergunta a fazer ao banco</h4>
 <p><strong>«Posso beneficiar do regime de crédito à habitação bonificado para pessoas com deficiência? Se já tenho um empréstimo, posso pedir a sua conversão?»</strong></p>
 <p>Conhecer este direito pode ajudar a reduzir os encargos com a casa ou a financiar adaptações que dão mais autonomia no dia a dia.</p>
+</div>
 </section>
-<section id="credit-content-8" role="tabpanel" aria-labelledby="credit-topic-8" tabindex="0" hidden>
+<section class="law-item" id="credit-content-8">
+<div>
 <h4>Fontes oficiais</h4>
 <ul>
 <li><a href="https://diariodarepublica.pt/dr/detalhe/lei/64-2014-56351555">Lei n.º 64/2014, de 26 de agosto</a></li>
 <li><a href="https://clientebancario.bportugal.pt/pt-pt/o-que-e-e-diferentes-regimes">Banco de Portugal — Regimes de crédito à habitação</a></li>
 <li><a href="https://diariodarepublica.pt/dr/detalhe/portaria/502-2003-693790">Portaria n.º 502/2003 — Taxa de referência para o cálculo das bonificações</a></li>
 </ul>
+</div>
 </section>
+</div>
 </article>
 </div>
 <p class="note">Informação de caráter geral, não substitui aconselhamento jurídico. A legislação pode ser alterada; confirme sempre a versão consolidada e as condições atuais junto das entidades oficiais. Os links para pesquisa do Diário da República permitem localizar o diploma quando não está disponível um endereço estável confirmado para a versão consolidada ou PDF.</p>
@@ -645,36 +653,6 @@ function openLawTabFromLink() {
 }
 window.addEventListener('load', openLawTabFromLink);
 window.addEventListener('hashchange', openLawTabFromLink);
-const creditTopicTabs = Array.from(document.querySelectorAll('#credito-habitacao [role="tab"]'));
-function selectCreditTopic(selectedTab) {
-  creditTopicTabs.forEach(function(tab) {
-    const active = tab === selectedTab;
-    tab.classList.toggle('active', active);
-    tab.setAttribute('aria-selected', String(active));
-    tab.tabIndex = active ? 0 : -1;
-    document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
-  });
-}
-creditTopicTabs.forEach(function(tab, index) {
-  tab.addEventListener('click', function() {
-    selectCreditTopic(tab);
-  });
-  tab.addEventListener('keydown', function(event) {
-    const last = creditTopicTabs.length - 1;
-    let next;
-    switch (event.key) {
-      case 'ArrowRight': next = index === last ? 0 : index + 1; break;
-      case 'ArrowLeft': next = index === 0 ? last : index - 1; break;
-      case 'Home': next = 0; break;
-      case 'End': next = last; break;
-      default: return;
-    }
-    event.preventDefault();
-    selectCreditTopic(creditTopicTabs[next]);
-    creditTopicTabs[next].focus();
-  });
-});
-
 </script>
 </section>
 
