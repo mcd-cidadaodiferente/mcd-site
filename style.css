@@ -255,3 +255,10 @@ footer{background:#172c43;border-top-color:#e58a34;padding-top:28px;padding-bott
 .mcd-event-card{border-top:4px solid #f28b24}
 .values article{border-top-color:#79ad35}
 footer{border-top:5px solid transparent;border-image:linear-gradient(90deg,#f28b24 0 25%,#79ad35 25% 50%,#079bd3 50% 75%,#d94391 75%) 1;background:#252525}
+
+.mcd-credit-guide{max-width:80ch;line-height:1.7}
+.mcd-credit-guide h4,.mcd-credit-guide h5{color:var(--navy);margin:1.5em 0 .4em}
+.mcd-credit-guide li{margin:.35em 0}
+.mcd-credit-guide blockquote{margin:1em 0;padding:.65em 1em;border-inline-start:4px solid #176b92;background:#f3f8fb}
+.mcd-credit-poster{max-width:480px;margin:1.25em 0}
+.mcd-credit-poster img{display:block;width:100%;height:auto;border-radius:12px}
