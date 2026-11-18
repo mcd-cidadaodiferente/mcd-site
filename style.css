@@ -260,5 +260,3 @@ footer{border-top:5px solid transparent;border-image:linear-gradient(90deg,#f28b
 .mcd-credit-guide h4,.mcd-credit-guide h5{color:var(--navy);margin:1.5em 0 .4em}
 .mcd-credit-guide li{margin:.35em 0}
 .mcd-credit-guide blockquote{margin:1em 0;padding:.65em 1em;border-inline-start:4px solid #176b92;background:#f3f8fb}
-.mcd-credit-poster{max-width:480px;margin:1.25em 0}
-.mcd-credit-poster img{display:block;width:100%;height:auto;border-radius:12px}
