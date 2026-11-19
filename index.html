@@ -25,6 +25,12 @@ footer .mcd-view-count{margin:0}
 #quem-somos .law-panel::after{content:"";display:block;clear:both}
 @media(max-width:700px){#quem-somos .mcd-about-image{float:none;display:block;width:100%;max-width:480px;margin:0 auto 22px}}
 </style>
+<style>
+#beneficios-fiscais table{width:100%;border-collapse:collapse;margin:1em 0}
+#beneficios-fiscais th,#beneficios-fiscais td{border:1px solid #dce6ee;padding:.5em;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+#beneficios-fiscais th{background:#eaf5fa;color:var(--navy)}
+#beneficios-fiscais a{overflow-wrap:anywhere}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -477,6 +483,7 @@ document.querySelector('.mcd-about-tabs').addEventListener('keydown', function(e
 <button class="law-tab" role="tab" id="tab-social" aria-controls="panel-social" aria-selected="false" onclick="showLawTab('social')">Prestações sociais</button>
 <button class="law-tab" role="tab" id="tab-educacao" aria-controls="panel-educacao" aria-selected="false" onclick="showLawTab('educacao')">Educação</button>
 <button class="law-tab" type="button" role="tab" id="tab-credito-habitacao" aria-controls="panel-credito-habitacao" aria-selected="false" onclick="showLawTab('credito-habitacao')">Crédito à habitação</button>
+<button class="law-tab" type="button" role="tab" id="tab-beneficios-fiscais" aria-controls="panel-beneficios-fiscais" aria-selected="false" onclick="showLawTab('beneficios-fiscais')">Benefícios fiscais</button>
 </div>
 <div class="law-panel active" id="panel-laboral" role="tabpanel" aria-labelledby="tab-laboral">
 <h3>Lei laboral</h3>
@@ -632,6 +639,591 @@ document.querySelector('.mcd-about-tabs').addEventListener('keydown', function(e
 </div>
 </article>
 </div>
+<div class="law-panel" id="panel-beneficios-fiscais" role="tabpanel" aria-labelledby="tab-beneficios-fiscais" hidden>
+<article class="mcd-credit-guide" id="beneficios-fiscais">
+<h3>Benefícios fiscais para pessoas com deficiência e famílias</h3>
+<p><strong>Guia do Movimento Cidadão Diferente · Edição de 19 de novembro de 2026</strong></p>
+<p>Este guia reúne as medidas fiscais nacionais relacionadas com a
+deficiência que podem ser relevantes para pessoas singulares e famílias.
+Abrange o IRS, o IUC, o ISV, o IVA e as franquias aduaneiras aplicáveis
+a certos produtos de apoio. Inclui ainda regras gerais úteis para as
+famílias.</p>
+<p>O primeiro passo é registar o atestado nas Finanças. Depois, confirme
+as condições do benefício que quer usar. Os valores em euros calculados
+com o Indexante dos Apoios Sociais (IAS) referem-se a 2026.</p>
+<nav aria-label="Temas dos benefícios fiscais">
+<p><strong>Consultar por tema</strong></p>
+<ul>
+<li><a href="#fiscal-atestado">Registar e atualizar o atestado</a></li>
+<li><a href="#fiscal-rendimentos">IRS sobre salários e pensões</a></li>
+<li><a href="#fiscal-deducoes">Deduções pessoais e familiares</a></li>
+<li><a href="#fiscal-despesas">Despesas e seguros no IRS</a></li>
+<li><a href="#fiscal-reavaliacao">Reavaliação e anos anteriores</a></li>
+<li><a href="#fiscal-iuc">Isenção de IUC</a></li>
+<li><a href="#fiscal-isv">Isenção de ISV</a></li>
+<li><a href="#fiscal-pedido-veiculo">Pedido e utilização do veículo</a></li>
+<li><a href="#fiscal-iva">IVA e produtos de apoio</a></li>
+<li><a href="#fiscal-habitacao">Habitação e outros encargos</a></li>
+<li><a href="#fiscal-casos-especificos">Outras situações específicas</a></li>
+<li><a href="#fiscal-pedido-at">Lista de verificação e pedido à AT</a></li>
+<li><a href="#fiscal-fontes">Fontes oficiais e ficha técnica</a></li>
+</ul>
+</nav>
+<div class="law-list">
+<section class="law-item" id="fiscal-atestado">
+<div style="min-width:0;width:100%">
+<h4>Registar e atualizar o atestado</h4>
+<p>Para o reconhecimento de deficiência fiscalmente relevante, a regra
+geral é um grau de incapacidade igual ou superior a 60%, comprovado pelo
+Atestado Médico de Incapacidade Multiúso (AMIM). O registo deve
+corresponder ao NIF da pessoa com deficiência, incluindo quando se trate
+de um filho.</p>
+<h5>Como comunicar às Finanças</h5>
+<ul>
+<li><p>No Portal das Finanças, abra Dados Cadastrais › Situação de
+Incapacidade › Entregar Pedido.</p></li>
+<li><p>Imprima o comprovativo do pedido. Em 15 dias, envie uma cópia
+desse comprovativo e uma cópia autenticada do AMIM à Direção de Serviços
+de Registo de Contribuintes, Avenida João XXI, n.º 76, 6.º piso,
+1049-065 Lisboa.</p></li>
+<li><p>Em alternativa, dirija-se a um Serviço de Finanças, levando o
+original do AMIM e os dados de identificação. Se representar outra
+pessoa, leve a documentação que comprove a representação, quando
+aplicável.</p></li>
+</ul>
+<p>Confirme depois se a situação ficou registada e se as datas e a
+percentagem estão corretas. Guarde o atestado anterior, o novo e o
+comprovativo do pedido de reavaliação. Se estiver à espera da junta
+médica, confirme com a AT quais os documentos que aceita para o
+benefício em causa.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Dados_pessoais_familia/Dados_pessoais/Deficiencia_fiscalmente_relevante/Paginas/default.aspx"><u>Portal
+das Finanças — Registo da deficiência fiscalmente relevante</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-rendimentos">
+<div style="min-width:0;width:100%">
+<h4>IRS sobre salários e pensões</h4>
+<p>Se for titular com deficiência fiscalmente relevante, o artigo 56.º-A
+do Código do IRS exclui de tributação uma parte do rendimento bruto do
+trabalho ou das pensões. O limite da exclusão é de 2 500 € por
+categoria.</p>
+<table>
+<thead>
+<tr class="header">
+<th scope="col"><strong>Categoria de rendimento</strong></th>
+<th scope="col"><strong>Parcela excluída</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A — Trabalho dependente</td>
+<td>15% até 2 500 €</td>
+</tr>
+<tr class="even">
+<td>B — Trabalho independente ou empresarial</td>
+<td>15% até 2 500 €</td>
+</tr>
+<tr class="odd">
+<td>H — Pensões</td>
+<td>10% até 2 500 €</td>
+</tr>
+</tbody>
+</table>
+<p>Exemplo. Num salário bruto anual de 20 000 €, 15% são 3 000 €. Como o
+limite é de 2 500 €, entram 17 500 € desta categoria no cálculo inicial,
+antes das demais regras do IRS.</p>
+<h5>Retenção ao longo do ano</h5>
+<p>Comunique o AMIM à entidade patronal ou pagadora da pensão para
+aplicação da tabela adequada. No trabalho independente, quando exista
+retenção, pode incidir sobre 50% do rendimento nas condições do artigo
+101.º-D. Para rendimentos de propriedade intelectual abrangidos pelo
+regime do artigo 58.º do EBF, a retenção pode incidir sobre 25%, com a
+menção legal no recibo.</p>
+<p>A retenção é um adiantamento. Confirme o grau de incapacidade na
+Modelo 3 e declare os rendimentos brutos nos anexos aplicáveis. A regra
+geral é entregar de 1 de abril a 30 de junho do ano seguinte.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs56a.aspx"><u>Código
+do IRS — Artigo 56.º-A</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs101d.aspx"><u>Código
+do IRS — Artigo 101.º-D</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-deducoes">
+<div style="min-width:0;width:100%">
+<h4>Deduções pessoais e familiares</h4>
+<p>Estas deduções abatem ao imposto calculado. O seu efeito depende da
+coleta disponível. O IAS de 2026 é de 537,13 €.</p>
+<table>
+<thead>
+<tr class="header">
+<th scope="col"><strong>Quem ou em que situação</strong></th>
+<th scope="col"><strong>Dedução em 2026</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Titular com incapacidade a partir de 60%</td>
+<td>4 IAS · 2 148,52 €</td>
+</tr>
+<tr class="even">
+<td>Dependente ou ascendente elegível com incapacidade a partir de
+60%</td>
+<td>2,5 IAS · 1 342,83 €</td>
+</tr>
+<tr class="odd">
+<td>Acompanhamento de titular ou dependente com invalidez permanente a
+partir de 90%</td>
+<td>Mais 4 IAS · 2 148,52 €</td>
+</tr>
+<tr class="even">
+<td>Titular com deficiência das Forças Armadas abrangido pelo art. 87.º,
+n.º 7</td>
+<td>Mais 1 IAS · 537,13 €</td>
+</tr>
+</tbody>
+</table>
+<p>A dedução de acompanhamento é fixa e acumula com a dedução base. A
+majoração das Forças Armadas também pode acumular nas condições legais.
+Para ascendentes, confirme a coabitação efetiva e o limite de rendimento
+aplicável à pensão mínima do regime geral.</p>
+<h5>Como usar na declaração</h5>
+<p>Confirme os NIF, a composição do agregado e a incapacidade no rosto
+da Modelo 3. Havendo responsabilidades parentais partilhadas, confirme a
+residência e a repartição aplicável. Um filho adulto pode integrar o
+agregado pelas regras gerais ou se estiver comprovadamente inapto para
+trabalhar e angariar meios de subsistência. Para este último efeito,
+confirme a certificação exigida pela AT.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs87.aspx"><u>Código
+do IRS — Artigos sobre deficiência e agregado</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-00263.aspx"><u>AT
+— Prova da inaptidão para o trabalho</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-despesas">
+<div style="min-width:0;width:100%">
+<h4>Despesas e seguros no IRS</h4>
+<h5>Educação e reabilitação</h5>
+<p>Pode deduzir 30% do que suportou com a educação ou reabilitação do
+próprio sujeito passivo ou dos seus dependentes com deficiência. O
+artigo 87.º não fixa um teto próprio para esta rubrica. Por exemplo, 600
+€ de despesa elegível correspondem a 180 € de dedução, havendo coleta
+suficiente.</p>
+<p>Peça fatura com o NIF correto e guarde prova da finalidade da
+despesa. Confirme as instruções da Modelo 3 do respetivo ano. No
+formulário consultado, a rubrica está no quadro 6B do Anexo H, com o
+código 606. Use o valor efetivamente suportado e evite declarar a mesma
+fatura em duas deduções.</p>
+<h5>Seguros e contribuições
+mutualistas</h5>
+<p>Pode deduzir 25% dos prémios de seguro de vida ou das contribuições
+mutualistas elegíveis, até 15% da coleta, quando cubram exclusivamente
+os riscos previstos na lei. Na reforma por velhice, o benefício deve
+estar garantido após os 55 anos e cinco anos de contrato. Aplicam-se as
+condições sobre quem pagou e os limites de 65 € ou 130 €, consoante o
+estado civil.</p>
+<p>Peça à seguradora ou associação mutualista a declaração anual dos
+pagamentos e confirme os riscos cobertos. No impresso consultado, use o
+quadro 6B do Anexo H, código 605 para morte ou invalidez e 604 para
+reforma por velhice. Confirme a versão do ano.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/modelos_formularios/irs/Documents/Mod_3_anexo_H.pdf"><u>Modelo
+3 — Anexo H e instruções oficiais</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs87.aspx"><u>Código
+do IRS — Artigo 87.º</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-reavaliacao">
+<div style="min-width:0;width:100%">
+<h4>Reavaliação e anos anteriores</h4>
+<p>Guarde os atestados antigos e novos. Se a percentagem descer numa
+reavaliação da mesma patologia, pode aplicar-se o princípio da avaliação
+mais favorável. A AT reviu este entendimento em abril de 2026. A data
+das avaliações e o resultado de cada uma influenciam o
+enquadramento.</p>
+<h5>Dedução transitória abaixo de
+60%</h5>
+<p>O artigo 87.º, n.º 9, prevê uma dedução transitória para a pessoa que
+tenha beneficiado da dedução por incapacidade de 60% ou mais durante
+pelo menos cinco anos e mantenha, após reavaliação, incapacidade de pelo
+menos 20%. A AT explica como articular esta regra com a avaliação mais
+favorável.</p>
+<table>
+<thead>
+<tr class="header">
+<th scope="col"><strong>Ano de aplicação da transição</strong></th>
+<th scope="col"><strong>Dedução</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primeiro</td>
+<td>2 IAS</td>
+</tr>
+<tr class="even">
+<td>Segundo</td>
+<td>1,5 IAS</td>
+</tr>
+<tr class="odd">
+<td>Terceiro</td>
+<td>1 IAS</td>
+</tr>
+<tr class="even">
+<td>Quarto</td>
+<td>0,5 IAS</td>
+</tr>
+</tbody>
+</table>
+<h5>Se o AMIM reconhecer anos
+anteriores</h5>
+<p>Se o atestado indicar expressamente que o grau relevante se reporta a
+anos anteriores, peça à AT a regularização das liquidações desses anos.
+Junte o AMIM e identifique cada ano e liquidação. A AT admite, em
+determinadas circunstâncias, reclamação graciosa em 120 dias desde a
+emissão do documento superveniente. Confirme de imediato o meio e o
+prazo aplicáveis.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio-circulado-20292-2026.pdf"><u>AT
+— Reavaliação e aplicação da dedução transitória</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio_Circulado_60310_2021.pdf"><u>AT
+— Atestado emitido com efeitos em anos anteriores</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-iuc">
+<div style="min-width:0;width:100%">
+<h4>Isenção de IUC</h4>
+<p>Uma pessoa com incapacidade igual ou superior a 60% pode pedir a
+isenção do Imposto Único de Circulação para um veículo elegível em seu
+nome. O benefício tem o limite de 240 € por ano. Se o imposto for
+superior, paga a diferença, sem prejuízo de regimes anteriores com
+regras próprias.</p>
+<table>
+<thead>
+<tr class="header">
+<th scope="col"><strong>Categoria</strong></th>
+<th scope="col"><strong>Condição das emissões</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A e E</td>
+<td>Sem limite específico de CO₂ para este benefício</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Até 180 g/km NEDC ou até 205 g/km WLTP</td>
+</tr>
+</tbody>
+</table>
+<h5>Onde e quando pedir</h5>
+<p>Registe primeiro o AMIM. No Portal das Finanças, pesquise por
+«Isenção de IUC por deficiência», selecione o veículo e submeta o
+pedido. Também pode tratar do pedido num Serviço de Finanças. No
+primeiro ano, faça-o até ao fim do prazo de pagamento aplicável ao
+veículo.</p>
+<p>A manutenção nos anos seguintes depende de continuarem reunidos os
+requisitos. Se mudar de veículo no mesmo ano, confirme as condições da
+opção e a eventual obrigação de pagar o IUC da viatura anterior.</p>
+<h5>Se houve reavaliação</h5>
+<blockquote>
+<p>Desde maio de 2026, a AT aplica ao IUC, com as devidas adaptações, o
+entendimento sobre a comprovação do grau de incapacidade. Se o sistema
+não reconhecer o seu caso, peça análise ao Serviço de Finanças.</p>
+</blockquote>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Veiculos/IUC/Paginas/default.aspx"><u>Portal
+das Finanças — IUC e acesso ao pedido</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio-circulado-40130-2026.pdf"><u>AT
+— Ofício-circulado n.º 40130/2026</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-isv">
+<div style="min-width:0;width:100%">
+<h4>Isenção de ISV</h4>
+<p>O Imposto Sobre Veículos é apurado na introdução no consumo. A
+isenção para uso próprio depende do tipo e do grau de incapacidade e das
+características do veículo.</p>
+<table>
+<thead>
+<tr class="header">
+<th scope="col"><strong>Quem pode beneficiar</strong></th>
+<th scope="col"><strong>Condição principal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pessoa com deficiência motora</td>
+<td>60% ou mais e maior de 18 anos</td>
+</tr>
+<tr class="even">
+<td>Pessoa com multideficiência profunda</td>
+<td>90% ou mais</td>
+</tr>
+<tr class="odd">
+<td>Pessoa que se move exclusivamente em cadeira de rodas</td>
+<td>60% ou mais</td>
+</tr>
+<tr class="even">
+<td>Pessoa com deficiência visual</td>
+<td>Alteração permanente no domínio da visão de 95%</td>
+</tr>
+<tr class="odd">
+<td>Pessoa com deficiência das Forças Armadas</td>
+<td>60% ou mais, nos termos legais</td>
+</tr>
+</tbody>
+</table>
+<p>A lei define requisitos funcionais específicos para cada grupo. Na
+deficiência motora, por exemplo, a incapacidade enquadrável tem de
+afetar a locomoção ou o acesso aos transportes nos termos do Código do
+ISV.</p>
+<h5>Limites do veículo</h5>
+<p>Em regra, até 160 g/km NEDC ou 184 g/km WLTP, com isenção até 7 800
+€. Se o ISV exceder o teto e o veículo for elegível, paga o excedente.
+Se a declaração impuser caixa automática, os limites sobem para 180 e
+207 g/km, respetivamente. O limite de emissões não se aplica a veículos
+especialmente adaptados ao transporte em cadeira de rodas nos termos
+legais.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Veiculos/Compra/Paginas/default.aspx"><u>AT
+— Compra de veículo com isenção de ISV e IVA</u></a></p>
+<p><a
+href="https://info-aduaneiro.portaldasfinancas.gov.pt/pt/informacao_aduaneira/Veiculos/isencao_def/Pages/isv-def-12.aspx"><u>Alfândegas
+— Requisitos técnicos do veículo</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-pedido-veiculo">
+<div style="min-width:0;width:100%">
+<h4>Pedido e utilização do veículo</h4>
+<h5>Antes de comprar ou importar</h5>
+<p>Submeta o pedido à alfândega do domicílio fiscal antes ou em
+simultâneo com a introdução no consumo. O concessionário pode apresentar
+o pedido em seu nome. Se importar diretamente, confirme o prazo da DAV
+antes da entrada do veículo. Para transformação que constitua facto
+gerador, há um prazo especial de 30 dias após a matrícula.</p>
+<ul>
+<li><p>Declaração Aduaneira de Veículo (DAV) e modelo 1460.1.</p></li>
+<li><p>Declaração de incapacidade com natureza, grau, limitações
+relevantes e eventual inaptidão para conduzir. Em regra, deve ter menos
+de cinco anos, salvo incapacidade definitiva sem reavaliação.</p></li>
+<li><p>Carta de condução, se exigida, comprovativo ou autorização de
+consulta da situação tributária e contributiva, e documentos do veículo
+conforme a operação.</p></li>
+</ul>
+<h5>Condução, transmissão e novo
+pedido</h5>
+<p>A condução por terceiros tem condições próprias, incluindo
+autorização prévia e presença da pessoa beneficiária em certos casos.
+Nos primeiros 12 meses, vender, transmitir, alugar ou emprestar pode
+implicar liquidação integral. Até cinco anos, a transmissão a quem não
+tenha direito à isenção pode originar ISV proporcional. Em regra, novo
+benefício só após cinco anos, com exceções legais por perda do veículo
+ou agravamento.</p>
+<p><a
+href="https://info-aduaneiro.portaldasfinancas.gov.pt/pt/informacao_aduaneira/Veiculos/isencao_def/Pages/isv-def-13.aspx"><u>Alfândegas
+— Prazo e local do pedido</u></a></p>
+<p><a
+href="https://info-aduaneiro.portaldasfinancas.gov.pt/pt/informacao_aduaneira/Veiculos/isencao_def/Pages/isv-def-14.aspx"><u>Alfândegas
+— Documentos necessários</u></a></p>
+<p><a
+href="https://info-aduaneiro.portaldasfinancas.gov.pt/pt/informacao_aduaneira/Veiculos/isencao_def/Pages/isv-def-15.aspx"><u>Alfândegas
+— Venda e transmissão</u></a></p>
+<p><a
+href="https://info-aduaneiro.portaldasfinancas.gov.pt/pt/informacao_aduaneira/Veiculos/isencao_def/Pages/isv-def-10.aspx"><u>Alfândegas
+— Condução por familiares e terceiros</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-iva">
+<div style="min-width:0;width:100%">
+<h4>IVA e produtos de apoio</h4>
+<h5>Isenção de IVA</h5>
+<p>O artigo 15.º, n.º 8, do Código do IVA abrange triciclos, cadeiras de
+rodas com ou sem motor e automóveis ligeiros de passageiros ou mistos
+para uso próprio, nas condições legais. O artigo 13.º, n.º 1, alínea j),
+prevê a isenção na importação. Confirme o enquadramento e faça o pedido
+à AT antes da operação, pelos procedimentos do ISV quando
+aplicáveis.</p>
+<p>Se vender um veículo adquirido com esta isenção antes de cinco anos,
+pode haver IVA a pagar, com base mínima fixada na lei. Peça previamente
+o apuramento à alfândega.</p>
+<h5>Taxa reduzida para bens
+elegíveis</h5>
+<p>As verbas 2.6 e 2.9 da Lista I do Código do IVA abrangem certos
+produtos de apoio, como próteses, cadeiras de rodas e equipamentos de
+acessibilidade expressamente listados. Alguns bens exigem receita
+médica. A taxa reduzida é de 6% no continente e 4% nas regiões
+autónomas, segundo a localização fiscal da operação. Peça ao fornecedor
+que identifique a verba na proposta e discrimine os bens e os
+serviços.</p>
+<h5>Franquia de direitos
+aduaneiros</h5>
+<p>Se importar de fora da UE certos artigos especialmente concebidos
+para pessoas cegas ou com outras deficiências, pergunte à alfândega
+antes da encomenda pela franquia dos artigos 66.º a 73.º do Regulamento
+(CE) n.º 1186/2009. Junte a ficha do artigo, a prova da condição e a
+finalidade de uso próprio, quando exigidas.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva15.aspx"><u>Código
+do IVA — Isenção na aquisição</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/diplomas_legislativos/Documents/Despacho_26026-2006.pdf"><u>Lista
+oficial de produtos de apoio — Despacho n.º 26026/2006</u></a></p>
+<p><a
+href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX%3A02009R1186-20260701"><u>EUR-Lex
+— Franquias aduaneiras</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-habitacao">
+<div style="min-width:0;width:100%">
+<h4>Habitação e outros encargos</h4>
+<h5>Lares,
+residências autónomas e apoio domiciliário</h5>
+<p>O artigo 84.º do Código do IRS permite deduzir 25% dos encargos
+elegíveis até 403,75 € no conjunto. Abrange apoio domiciliário e
+respostas para idosos nos termos legais, bem como lares e residências
+autónomas para pessoas com deficiência. Para encargos com familiares
+abrangidos, confirme o limite de rendimentos e o grau de parentesco.
+Peça fatura ou comprovativo e confira os valores comunicados à AT.</p>
+<h5>Trabalho doméstico declarado</h5>
+<p>A dedução geral do artigo 78.º-H é de 5% da remuneração paga, até 200
+€ no agregado. Aplica-se a contratos de serviço doméstico enquadrados na
+lei e declarados à Segurança Social. Confirme os valores comunicados na
+declaração de IRS.</p>
+<h5>IMI, IMT e Imposto do Selo</h5>
+<p>O AMIM, por si só, não dá uma isenção nacional automática destes
+impostos na habitação. Verifique os regimes gerais de IMI por
+rendimentos e património, as reduções municipais e os benefícios na
+compra quando reunir os critérios próprios. Confirme o IMT e o Imposto
+do Selo antes da escritura. Para financiamento bonificado, consulte o
+guia específico do MCD.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs84.aspx"><u>Código
+do IRS — Encargos com lares</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs78h.aspx"><u>Código
+do IRS — Trabalho doméstico</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-00488.aspx"><u>AT
+— Incapacidade e IMI</u></a></p>
+<p><a href="https://mcd-pt.org/#credito-habitacao"><u>MCD — Guia sobre
+crédito à habitação bonificado</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-casos-especificos">
+<div style="min-width:0;width:100%">
+<h4>Outras situações específicas</h4>
+<h5>Indemnizações e
+determinadas pensões</h5>
+<p>O artigo 12.º do Código do IRS exclui de tributação determinadas
+indemnizações por lesão corporal, doença ou morte e algumas pensões
+expressamente previstas, incluindo situações ligadas ao serviço militar.
+A origem da prestação e a entidade pagadora são decisivas. Peça a
+declaração anual e confirme com a AT o enquadramento antes de preencher
+o IRS.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs12.aspx"><u>Código
+do IRS — Artigo 12.º</u></a></p>
+<h5>Resgate de
+um PPR por incapacidade ou doença grave</h5>
+<p>A incapacidade permanente para o trabalho ou a doença grave do
+participante ou de um membro do agregado podem permitir o reembolso nos
+termos legais. Peça à entidade gestora a lista de comprovativos e uma
+simulação fiscal antes de resgatar, em particular se deduziu entregas em
+IRS. As datas das entregas e do evento podem ser relevantes.</p>
+<p><a
+href="https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2002-34431475-55240699"><u>Diário
+da República — Reembolso de PPR</u></a></p>
+<h5>Serviços de saúde e apoio
+social</h5>
+<p>Alguns serviços de saúde e de apoio social podem ser isentos de IVA
+ao abrigo do artigo 9.º do Código do IVA, consoante o serviço e a
+qualificação do prestador. Confirme o enquadramento na proposta e na
+fatura do prestador.</p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva9.aspx"><u>Código
+do IVA — Isenções nas operações internas</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-pedido-at">
+<div style="min-width:0;width:100%">
+<h4>Lista de verificação e pedido à AT</h4>
+<ul>
+<li><p>Registe o AMIM no NIF da pessoa a que diz respeito. Guarde
+comprovativos, atestados anteriores e datas de avaliação.</p></li>
+<li><p>Para o IRS, confirme o agregado, a incapacidade e as despesas
+elegíveis. Guarde faturas e documentos da seguradora ou da
+instituição.</p></li>
+<li><p>Para o IUC, confirme o titular e as emissões no documento da
+viatura. Apresente o primeiro pedido dentro do prazo.</p></li>
+<li><p>Para ISV ou IVA, peça confirmação à alfândega antes de comprar,
+importar ou legalizar a viatura.</p></li>
+<li><p>Para produtos de apoio, confirme com o fornecedor a verba de IVA,
+a necessidade de receita e o enquadramento de cada bem.</p></li>
+</ul>
+<h5>Modelo para pedir
+esclarecimento no e-balcão</h5>
+<h5>Mensagem à Autoridade
+Tributária</h5>
+<blockquote>
+<p>Pretendo confirmar se reúno os requisitos para [identificar o
+benefício e o ano]. O AMIM foi emitido em [data], indica uma
+incapacidade de [percentagem] e é válido até [data ou indicação de
+caráter definitivo]. Peço indicação dos documentos e do procedimento
+aplicável. Caso exista uma liquidação, o número é [número].</p>
+</blockquote>
+<p>O e-balcão permite pedir informação e juntar documentos pelos canais
+da AT. Para um pedido de isenção ou uma reclamação com prazo, utilize a
+via formal aplicável e guarde o comprovativo.</p>
+<p><a href="https://www.portaldasfinancas.gov.pt/"><u>Portal das
+Finanças — Acesso ao apoio ao contribuinte</u></a></p>
+</div>
+</section>
+<section class="law-item" id="fiscal-fontes">
+<div style="min-width:0;width:100%">
+<h4>Fontes oficiais e ficha técnica</h4>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Dados_pessoais_familia/Dados_pessoais/Deficiencia_fiscalmente_relevante/Paginas/default.aspx"><u>AT
+— Deficiência fiscalmente relevante</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/Cod_download/Documents/cirs.pdf"><u>Código
+do IRS — Texto integral</u></a></p>
+<p><a
+href="https://diariodarepublica.pt/dr/detalhe/portaria/480-a-2025-993056222"><u>IAS
+2026 — Portaria n.º 480-A/2025/1</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/iuc/Pages/iuc5.aspx"><u>Código
+do IUC — Artigo 5.º</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Veiculos/Compra/Paginas/default.aspx"><u>AT
+— ISV e IVA na compra de veículos</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva13.aspx"><u>Código
+do IVA — Isenções na importação</u></a></p>
+<p><a
+href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/c-iva-listas.aspx"><u>Código
+do IVA — Lista I de taxas reduzidas</u></a></p>
+<p><a
+href="https://www.gov.pt/guias/doencas-incapacitantes-apoios-socioeconomicos-e-beneficios-fiscais"><u>Gov.pt
+— Apoios e benefícios fiscais</u></a></p>
+<h5>Ficha técnica</h5>
+<p>Edição do Movimento Cidadão Diferente · Coleção Guias MCD</p>
+<p>Âmbito: pessoas singulares e famílias, com base nas regras nacionais
+em vigor consultadas em 19 de novembro de 2026. As medidas municipais e
+as isenções de entidades coletivas seguem critérios próprios.</p>
+<p><a href="https://mcd-pt.org"><u>mcd-pt.org</u></a></p>
+<p><a href="mailto:geral@mcd-pt.org"><u>geral@mcd-pt.org</u></a></p>
+</div>
+</section>
+</div>
+</article>
+</div>
 <p class="note">Informação de caráter geral, não substitui aconselhamento jurídico. A legislação pode ser alterada; confirme sempre a versão consolidada e as condições atuais junto das entidades oficiais. Os links para pesquisa do Diário da República permitem localizar o diploma quando não está disponível um endereço estável confirmado para a versão consolidada ou PDF.</p>
 <script>
 function showLawTab(area) {
@@ -647,6 +1239,14 @@ function showLawTab(area) {
   });
 }
 function openLawTabFromLink() {
+  var anchor = location.hash.slice(1);
+  if (anchor === 'beneficios-fiscais' || anchor.startsWith('fiscal-')) {
+    var fiscalTarget = document.getElementById(anchor);
+    if (fiscalTarget) {
+      showLawTab('beneficios-fiscais');
+      fiscalTarget.scrollIntoView();
+    }
+  }
   if (location.hash === '#credito-habitacao') {
     showLawTab('credito-habitacao');
     document.getElementById('credito-habitacao').scrollIntoView();
