@@ -353,6 +353,94 @@ document.querySelector('.mcd-about-tabs').addEventListener('keydown', function(e
 </script>
 </section>
 <section class="section focus" id="noticias"><p class="eyebrow">Atualidade</p><h2>Notícias e comunicados.</h2><p class="section-lead">Acompanhe as posições públicas, iniciativas e propostas do Movimento Cidadão Diferente.</p>
+<article class="mcd-news-article" id="subsidio-educacao-especial" aria-labelledby="subsidio-educacao-especial-titulo">
+<div class="mcd-news-body" style="grid-column:1 / -1">
+<span class="tag">Em destaque</span>
+<h3 id="subsidio-educacao-especial-titulo">Subsídio de Educação Especial: atrasos no pagamento e dificuldades na entrega de faturas</h3>
+<p>O Movimento Cidadão Diferente recebeu relatos de famílias que continuam sem receber o Subsídio de Educação Especial, apesar de o pedido já ter sido deferido. Há casos em que a espera ultrapassa dois meses. Algumas famílias também referem que não conseguem submeter as faturas na Segurança Social Direta.</p>
+<p>Se está nesta situação, partilhe o seu caso com o Movimento. Estamos a reunir os relatos para perceber a dimensão do problema e pedir esclarecimentos às entidades responsáveis.</p>
+<p><a class="button primary" href="#comunicar-subsidio-educacao-especial">Comunicar a minha situação</a></p>
+<h4 id="comunicar-subsidio-educacao-especial">Comunicar a minha situação</h4>
+<p id="subsidio-envio-ajuda">O formulário prepara uma mensagem para geral@mcd-pt.org na sua aplicação de email. Reveja a mensagem e carregue em «Enviar» nessa aplicação.</p>
+<form id="subsidio-relato" aria-labelledby="comunicar-subsidio-educacao-especial" aria-describedby="subsidio-envio-ajuda subsidio-dados-ajuda">
+<style>
+#subsidio-relato { display:grid; gap:1rem; max-width:38rem; }
+#subsidio-relato label { display:grid; gap:.35rem; }
+#subsidio-relato input, #subsidio-relato select, #subsidio-relato textarea { width:100%; min-width:0; padding:.6rem; font:inherit; color:inherit; background:#fff; border:1px solid #587376; border-radius:.35rem; box-sizing:border-box; }
+#subsidio-relato button { justify-self:start; font:inherit; cursor:pointer; }
+</style>
+<label>O seu nome <input name="nome" autocomplete="name" required maxlength="120"></label>
+<label>Distrito ou região autónoma de residência
+<select name="distrito" required>
+<option value="">Selecione uma opção</option>
+<option>Aveiro</option>
+<option>Beja</option>
+<option>Braga</option>
+<option>Bragança</option>
+<option>Castelo Branco</option>
+<option>Coimbra</option>
+<option>Évora</option>
+<option>Faro</option>
+<option>Guarda</option>
+<option>Leiria</option>
+<option>Lisboa</option>
+<option>Portalegre</option>
+<option>Porto</option>
+<option>Santarém</option>
+<option>Setúbal</option>
+<option>Viana do Castelo</option>
+<option>Vila Real</option>
+<option>Viseu</option>
+<option>Região Autónoma dos Açores</option>
+<option>Região Autónoma da Madeira</option>
+</select></label>
+<label>Concelho de residência <input name="concelho" required maxlength="100"></label>
+<label>Data do deferimento <input type="date" name="data" required max="2026-11-23"></label>
+<label>Estado atual
+<select name="estado" required>
+<option value="">Selecione uma opção</option>
+<option>Deferido e sem pagamento</option>
+<option>Deferido e com dificuldades na submissão de faturas</option>
+<option>Deferido, sem pagamento e com dificuldades na submissão de faturas</option>
+<option>Outro (explique abaixo)</option>
+</select></label>
+<label>Descreva a situação <textarea name="relato" rows="5" required maxlength="1500"></textarea></label>
+<p id="subsidio-dados-ajuda">Indique apenas os dados necessários para explicar o atraso ou a dificuldade. Evite incluir nomes de menores, números de identificação, dados clínicos ou documentos.</p>
+<button class="button primary" type="submit" disabled>Preparar email para o Movimento</button>
+</form>
+<p>Também pode escrever diretamente para <a href="mailto:geral@mcd-pt.org">geral@mcd-pt.org</a> e indicar os mesmos dados.</p>
+<script>
+(() => {
+  const form = document.getElementById('subsidio-relato');
+  const dateField = form.elements.namedItem('data');
+  const today = new Date();
+  dateField.max = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, '0'),
+    String(today.getDate()).padStart(2, '0')
+  ].join('-');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const fields = new FormData(form);
+    const date = fields.get('data').split('-').reverse().join('/');
+    const body = [
+      'Nome: ' + fields.get('nome').trim(),
+      'Distrito ou região autónoma: ' + fields.get('distrito'),
+      'Concelho: ' + fields.get('concelho').trim(),
+      'Data do deferimento: ' + date,
+      'Estado atual: ' + fields.get('estado'),
+      '',
+      'Descrição da situação:',
+      fields.get('relato').trim()
+    ].join('\r\n');
+    const subject = encodeURIComponent('Subsídio de Educação Especial — relato de situação');
+    window.location.href = 'mailto:geral@mcd-pt.org?subject=' + subject + '&body=' + encodeURIComponent(body);
+  });
+  form.querySelector('button').disabled = false;
+})();
+</script>
+</div>
+</article>
 <article class="mcd-news-article" id="noticia-credito-habitacao" aria-labelledby="noticia-credito-habitacao-titulo">
 <div class="mcd-news-poster-wrap"><a href="credito-habitacao-bonificado-mcd.webp" aria-label="Ver cartaz do crédito à habitação bonificado em tamanho integral">
 <img class="mcd-news-poster" src="credito-habitacao-bonificado-mcd.webp" width="1122" height="1402" loading="lazy" alt="Cartaz do Movimento Cidadão Diferente. Crédito à habitação bonificado para pessoas com 60% ou mais de incapacidade, comprovada por atestado multiúso. Compra, construção e obras de acessibilidade. Quem já tem crédito pode pedir ao banco que avalie a conversão.">
